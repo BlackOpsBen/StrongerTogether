@@ -12,6 +12,13 @@ public class TargetEnemies : MonoBehaviour
 
     public Transform actualTarget;
 
+    private FiringArcChecker firingArcChecker;
+
+    private void Start()
+    {
+        firingArcChecker = GetComponent<FiringArcChecker>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("Target"))
@@ -85,7 +92,6 @@ public class TargetEnemies : MonoBehaviour
 
     private bool CheckIsInFiringArc(Transform target)
     {
-        // TODO implement check
-        return true;
+        return firingArcChecker.CheckIsInArc(target);
     }
 }
