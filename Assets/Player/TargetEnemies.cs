@@ -8,7 +8,11 @@ public class TargetEnemies : MonoBehaviour
 
     CircleCollider2D circleCollider;
 
-    public List<Transform> targets = new List<Transform>();
+    public List<Transform> rangedTargets = new List<Transform>();
+
+    public List<Transform> arcTargets = new List<Transform>();
+
+    public Transform actualTarget;
 
     private void Start()
     {
@@ -19,20 +23,76 @@ public class TargetEnemies : MonoBehaviour
     {
         if (collision.transform.CompareTag("Target"))
         {
-            targets.Add(collision.transform);
+            rangedTargets.Add(collision.transform);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (targets.Contains(collision.transform))
+        if (rangedTargets.Contains(collision.transform))
         {
-            targets.Remove(collision.transform);
+            rangedTargets.Remove(collision.transform);
         }
     }
 
-    public void FireWeapon()
+    private void Update()
     {
-        weapon.Shoot();
+        RemoveDeadTargets();
+        FindTargetsInArc();
+        if (arcTargets.Count > 0)
+        {
+            actualTarget = FindClosestTarget();
+            weapon.Shoot(actualTarget);
+        }
+        else
+        {
+            actualTarget = null;
+        }
+    }
+
+    private void RemoveDeadTargets()
+    {
+        for (int i = 0; i < rangedTargets.Count; i++)
+        {
+            if (rangedTargets[i] == null)
+            {
+                rangedTargets.RemoveAt(i);
+            }
+        }
+    }
+
+    private void FindTargetsInArc()
+    {
+        arcTargets = new List<Transform>();
+        for (int i = 0; i < rangedTargets.Count; i++)
+        {
+            if (CheckIsInFiringArc(rangedTargets[i]))
+            {
+                arcTargets.Add(rangedTargets[i]);
+            }
+        }
+    }
+
+    private Transform FindClosestTarget()
+    {
+        Transform closestTarget = arcTargets[0];
+        float closestTargetDist = Vector2.Distance(transform.position, closestTarget.position);
+
+        for (int i = 1; i < arcTargets.Count; i++)
+        {
+            float distance = Vector2.Distance(transform.position, arcTargets[i].position);
+            if (distance < closestTargetDist)
+            {
+                closestTarget = arcTargets[i];
+                closestTargetDist = distance;
+            }
+        }
+        return closestTarget;
+    }
+
+    private bool CheckIsInFiringArc(Transform target)
+    {
+        // TODO implement check
+        return true;
     }
 }

@@ -20,8 +20,8 @@ public class WeaponTemplate : ScriptableObject
         return range;
     }
 
-    public void Shoot()
+    public void Shoot(Transform target)
     {
-        Debug.LogWarning(name + " fired!");
+        Debug.LogWarning(name + " fired at " + target.name);
     }
 }
