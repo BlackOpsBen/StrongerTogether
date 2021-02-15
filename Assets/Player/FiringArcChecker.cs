@@ -5,6 +5,7 @@ using UnityEngine;
 public class FiringArcChecker : MonoBehaviour
 {
     private TargetEnemies targetEnemies;
+    private DrawFiringArc drawFiringArc;
 
     [SerializeField] Transform arcLimit1;
     [SerializeField] Transform arcLimit2;
@@ -22,6 +23,7 @@ public class FiringArcChecker : MonoBehaviour
     private void Start()
     {
         targetEnemies = GetComponent<TargetEnemies>();
+        drawFiringArc = GetComponent<DrawFiringArc>();
         arcSizeDegrees = targetEnemies.weapon.GetFiringArc();
         halfArc = arcSizeDegrees / 2;
     }
@@ -44,7 +46,10 @@ public class FiringArcChecker : MonoBehaviour
             Debug.DrawLine(transform.position, arc1Heading, Color.white);
             Debug.DrawLine(transform.position, arc2Heading, Color.yellow);
         }
-        
+        Vector3[] arcPoints = new Vector3[2];
+        arcPoints[0] = transform.position;
+        arcPoints[1] = heading;
+        drawFiringArc.SetUpLinePoints(arcPoints);
     }
 
     private void OnDrawGizmos()
