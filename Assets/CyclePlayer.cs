@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class CyclePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Movement[] playerCharacters;
+
+    PlayerControls controls;
+
+    private int currentPlayer = 0;
+
+    private void Awake()
     {
-        
+        controls = new PlayerControls();
+
+        controls.DefaultActionMap.SelectNext.performed += ctx => SelectNext();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        playerCharacters = FindObjectsOfType<Movement>();
+        playerCharacters[currentPlayer].SetIsActive(true);
+    }
+
+    void SelectNext()
+    {
+        playerCharacters[currentPlayer].SetIsActive(false);
+        currentPlayer++;
+        currentPlayer = currentPlayer % playerCharacters.Length;
+        playerCharacters[currentPlayer].SetIsActive(true);
+        Debug.Log("Next player: " + currentPlayer.ToString());
+    }
+
+    private void OnEnable()
+    {
+        controls.DefaultActionMap.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.DefaultActionMap.Disable();
     }
 }

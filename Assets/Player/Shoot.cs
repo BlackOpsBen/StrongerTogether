@@ -11,8 +11,6 @@ public class Shoot : MonoBehaviour
     private void Awake()
     {
         controls = new PlayerControls();
-
-        controls.DefaultActionMap.SelectNext.performed += ctx => FireWeapon();
     }
 
     public void FireWeapon()
