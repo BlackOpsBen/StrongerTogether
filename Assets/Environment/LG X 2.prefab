@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1556263485982105912}
   - component: {fileID: 1556263485982105913}
   - component: {fileID: 1556263485982105895}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: FrontWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -109,7 +109,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -208,7 +208,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -249,26 +249,26 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: baea05f2422032245a24c3bc8219d18c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: e4f66dcd2a4f0c244ac2d23625947244, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: 02f27e1657d881f44ae238eb0f1c64da, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: 1032d27b4bb9b4a4d8e5900ab320af21, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 21603c0ea76c15b41b0c95ea02e7a9b3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 1b2998ac57db9024ea0fc6ceefd52449, type: 3}
+    m_Data: {fileID: 21300000, guid: e4f66dcd2a4f0c244ac2d23625947244, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: dec36d1198cfeb1409695046d1d9043a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 398d6ea5067e2c647b02f9cd3537a2a0, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 1d7bf9334288f87428390e3b5b7c86bf, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 1b2998ac57db9024ea0fc6ceefd52449, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 21603c0ea76c15b41b0c95ea02e7a9b3, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 20
     m_Data:
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 1556263486196262623}
   - component: {fileID: 1556263486196262608}
   - component: {fileID: 1556263486196262622}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BackWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}

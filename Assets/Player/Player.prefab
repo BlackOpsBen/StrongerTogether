@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facing: {fileID: 3261774524549477216}
-  movementSpeed: 2
+  movementSpeed: 3
   rotationSpeed: 10
 --- !u!58 &3261774524731607463
 CircleCollider2D:
@@ -349,7 +349,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &6962185397186972961
 MonoBehaviour:
