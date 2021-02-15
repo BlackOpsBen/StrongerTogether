@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: test_floor
+  m_Name: Convex Corner Bottom Right
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 8554700712925232526, guid: 7f14a13d14c0b654798aeff64f83e0f8,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad66fa1510834944c983025a6e1216ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

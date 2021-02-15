@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    private bool isActive = false;
+
     PlayerControls controls;
 
     Vector2 movement;
@@ -23,8 +25,11 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        MovePlayer();
-        RotatePlayer();
+        if (isActive)
+        {
+            MovePlayer();
+            RotatePlayer();
+        }
     }
 
     void MovePlayer()
@@ -43,6 +48,11 @@ public class Movement : MonoBehaviour
 
             facing.rotation = Quaternion.Slerp(facing.rotation, rotation, rotationSpeed * Time.deltaTime);
         }
+    }
+
+    public void SetIsActive(bool value)
+    {
+        isActive = value;
     }
 
     private void OnEnable()
