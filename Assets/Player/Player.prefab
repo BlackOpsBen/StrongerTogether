@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3261774524549477218}
   - component: {fileID: 2644570524013287693}
   - component: {fileID: 5246217970100954704}
+  - component: {fileID: 1476738590}
   m_Layer: 0
   m_Name: Facing
   m_TagString: Untagged
@@ -125,6 +126,18 @@ MonoBehaviour:
   rangeSpeed: 5
   circleCollider: {fileID: 3261774524549477218}
   targetEnemies: {fileID: 2644570524013287693}
+--- !u!114 &1476738590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261774524549477223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1c31941dfcfc240bc2939f9c70087b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3261774524731607467
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +150,7 @@ GameObject:
   - component: {fileID: 3261774524731607461}
   - component: {fileID: 3261774524731607463}
   - component: {fileID: 3261774524731607462}
+  - component: {fileID: 6962185397186972961}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -215,6 +229,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6962185397186972961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261774524731607467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0c2376930ecd246b520f056ae48f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 5
 --- !u!1 &3261774525539720104
 GameObject:
   m_ObjectHideFlags: 0

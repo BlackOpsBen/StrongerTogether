@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e7df4cec247ac04ab2c2b51ebe032d3, type: 3}
-  m_Name: Machine Gun
+  m_Name: Pistol
   m_EditorClassIdentifier: 
-  range: 4
-  rangeWhileMoving: 0
-  firingArc: 30
-  rateOfFireRPS: 6
+  range: 3
+  rangeWhileMoving: 1
+  firingArc: 360
+  rateOfFireRPS: 2
   damage: 1

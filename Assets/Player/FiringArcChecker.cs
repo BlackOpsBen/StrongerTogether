@@ -14,13 +14,16 @@ public class FiringArcChecker : MonoBehaviour
     float arcSizeDegrees;
     float halfArc;
 
+    private void Awake()
+    {
+        circleCollider = GetComponent<CircleCollider2D>();
+    }
+
     private void Start()
     {
         targetEnemies = GetComponent<TargetEnemies>();
         arcSizeDegrees = targetEnemies.weapon.GetFiringArc();
         halfArc = arcSizeDegrees / 2;
-
-        circleCollider = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
@@ -32,13 +35,25 @@ public class FiringArcChecker : MonoBehaviour
         Vector2 arc1Heading = transform.position + arcLimit1.right * circleCollider.radius;
         Vector2 arc2Heading = transform.position + arcLimit2.right * circleCollider.radius;
 
-        // Draw heading
-        Debug.DrawLine(transform.position, heading, Color.red);
+        if (arcSizeDegrees < 360.0f)
+        {
+            // Draw heading
+            Debug.DrawLine(transform.position, heading, Color.red);
 
+            // Draw arc limits
+            Debug.DrawLine(transform.position, arc1Heading, Color.white);
+            Debug.DrawLine(transform.position, arc2Heading, Color.yellow);
+        }
+        
+    }
 
-        // Draw arc limits
-        Debug.DrawLine(transform.position, arc1Heading, Color.white);
-        Debug.DrawLine(transform.position, arc2Heading, Color.yellow);
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        if (arcSizeDegrees.Equals(360.0f))
+        {
+            Gizmos.DrawWireSphere(transform.position, circleCollider.radius);
+        }
     }
 
     private void SetArcRotations()

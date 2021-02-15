@@ -57,7 +57,7 @@ public class Movement : MonoBehaviour
 
     public bool GetIsMoving()
     {
-        if (movement.magnitude > float.Epsilon)
+        if (isActive && movement.magnitude > float.Epsilon)
         {
             return true;
         }
