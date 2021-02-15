@@ -42,7 +42,7 @@ public class TargetEnemies : MonoBehaviour
         if (arcTargets.Count > 0)
         {
             actualTarget = FindClosestTarget();
-            weapon.Shoot(actualTarget);
+            weapon.PullTrigger(actualTarget);
         }
         else
         {

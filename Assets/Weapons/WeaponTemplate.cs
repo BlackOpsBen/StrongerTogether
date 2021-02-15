@@ -8,8 +8,21 @@ public class WeaponTemplate : ScriptableObject
     [SerializeField] float range;
     [SerializeField] float rangeWhileMoving;
     [SerializeField] float firingArc;
-    [SerializeField] float rateOfFire;
-    [SerializeField] float damage;
+    [SerializeField] float rateOfFireRPS;
+    [SerializeField] int damage;
+
+    private bool isReady = true;
+    private float reloadTimer;
+
+    public float GetReloadTimer()
+    {
+        return reloadTimer;
+    }
+
+    public void SetReloadTimer(float newValue)
+    {
+        reloadTimer = newValue;
+    }
 
     public float GetFiringArc()
     {
@@ -26,8 +39,33 @@ public class WeaponTemplate : ScriptableObject
         return rangeWhileMoving;
     }
 
-    public void Shoot(Transform target)
+    public float GetRateOfFire()
     {
-        
+        return rateOfFireRPS;
+    }
+
+    public void PullTrigger(Transform target)
+    {
+        if (isReady)
+        {
+            FireShot(target);
+            isReady = false;
+            SetReloadTimer(0.0f);
+        }
+    }
+
+    private void FireShot(Transform target)
+    {
+        Health targetHealth = target.GetComponent<Health>();
+        if (targetHealth != null)
+        {
+            targetHealth.ModifyHealth(damage);
+        }
+        Debug.Log("Shot fired!");
+    }
+
+    public void SetIsReady(bool value)
+    {
+        isReady = value;
     }
 }
