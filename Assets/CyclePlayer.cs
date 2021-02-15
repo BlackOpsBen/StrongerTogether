@@ -54,9 +54,12 @@ public class CyclePlayer : MonoBehaviour
     {
         if (index < playerCharacters.Length)
         {
-            playerCharacters[currentPlayer].SetIsActive(false);
-            currentPlayer = index;
-            playerCharacters[currentPlayer].SetIsActive(true);
+            if (playerCharacters[index].GetComponent<Health>().GetCurrentHealth() > 0)
+            {
+                playerCharacters[currentPlayer].SetIsActive(false);
+                currentPlayer = index;
+                playerCharacters[currentPlayer].SetIsActive(true);
+            }
         }
     }
 

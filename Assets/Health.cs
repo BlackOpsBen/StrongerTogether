@@ -26,4 +26,9 @@ public class Health : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public int GetCurrentHealth()
+    {
+        return currentHP;
+    }
 }
