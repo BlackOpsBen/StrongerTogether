@@ -59,7 +59,7 @@ public class WeaponTemplate : ScriptableObject
         Health targetHealth = target.GetComponent<Health>();
         if (targetHealth != null)
         {
-            targetHealth.ModifyHealth(damage);
+            targetHealth.ModifyHealth(-damage);
         }
         Debug.Log("Shot fired!");
     }
