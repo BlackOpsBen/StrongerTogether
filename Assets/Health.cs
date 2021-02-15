@@ -6,9 +6,11 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int maxHP = 5;
     private int currentHP;
+    private IDie deathBehavior;
 
     private void Start()
     {
+        deathBehavior = GetComponent<IDie>();
         currentHP = maxHP;
     }
 
@@ -16,7 +18,18 @@ public class Health : MonoBehaviour
     {
         currentHP += amount;
         currentHP = Mathf.Min(maxHP, currentHP);
-        if (currentHP < 0)
+        CheckForDeath();
+    }
+
+    public void SetHealth(int newHP)
+    {
+        currentHP = newHP;
+        CheckForDeath();
+    }
+
+    private void CheckForDeath()
+    {
+        if (currentHP < 1)
         {
             Die();
         }
@@ -24,7 +37,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        deathBehavior.Die();
     }
 
     public int GetCurrentHealth()

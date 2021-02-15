@@ -8,7 +8,7 @@ public class FollowPlayer : MonoBehaviour
 {
     public List<Transform> targets;
 
-    public float trackSpeed = 10f;
+    public float trackSpeed = 5f;
 
     public float minZoom = 10f;
 
@@ -21,6 +21,16 @@ public class FollowPlayer : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
+    }
+    private void Update()
+    {
+        for (int i = 0; i < targets.Count; i++)
+        {
+            if (targets[i].GetComponent<Health>().GetCurrentHealth() < 1)
+            {
+                targets.RemoveAt(i);
+            }
+        }
     }
 
     private void LateUpdate()

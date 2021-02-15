@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 341397897251918933}
   - component: {fileID: 341397897251918930}
   - component: {fileID: 6098910394037521020}
+  - component: {fileID: 3232149907556252251}
+  - component: {fileID: 145194138202449942}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Target
@@ -83,6 +85,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0c2376930ecd246b520f056ae48f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 5
+--- !u!114 &3232149907556252251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341397897251918928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f299b0e624d2d4889d2faba1e09fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &145194138202449942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341397897251918928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ced53883e5a61840aa09f9ddc43b2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 1
 --- !u!1 &341397897445859510
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +179,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1322482823
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2a995b960875dfa40b01fca652c7cf4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

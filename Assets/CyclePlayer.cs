@@ -22,21 +22,30 @@ public class CyclePlayer : MonoBehaviour
         controls.DefaultActionMap.Select3.performed += ctx => Select(3);
     }
 
-    void Start()
+    private void Start()
     {
         playerCharacters = FindObjectsOfType<Movement>();
         playerCharacters[currentPlayer].SetIsActive(true);
     }
 
-    void SelectNext()
+    public void SelectNext()
     {
         playerCharacters[currentPlayer].SetIsActive(false);
-        currentPlayer++;
-        currentPlayer = currentPlayer % playerCharacters.Length;
-        playerCharacters[currentPlayer].SetIsActive(true);
+
+        for (int i = 0; i < playerCharacters.Length; i++)
+        {
+            currentPlayer++;
+            currentPlayer = currentPlayer % playerCharacters.Length;
+
+            if (playerCharacters[currentPlayer].GetComponent<Health>().GetCurrentHealth() > 0)
+            {
+                playerCharacters[currentPlayer].SetIsActive(true);
+                return;
+            }
+        }
     }
 
-    void SelectPrevious()
+    private void SelectPrevious()
     {
         playerCharacters[currentPlayer].SetIsActive(false);
         if (currentPlayer == 0)
@@ -50,7 +59,7 @@ public class CyclePlayer : MonoBehaviour
         playerCharacters[currentPlayer].SetIsActive(true);
     }
 
-    void Select(int index)
+    private void Select(int index)
     {
         if (index < playerCharacters.Length)
         {

@@ -15,8 +15,12 @@ public class Movement : MonoBehaviour
     [SerializeField] float movementSpeed = 2f;
     [SerializeField] float rotationSpeed = 10f;
 
+    private Health health;
+
     private void Awake()
     {
+        health = GetComponent<Health>();
+
         controls = new PlayerControls();
 
         controls.DefaultActionMap.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
@@ -25,7 +29,7 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        if (isActive)
+        if (isActive && health.GetCurrentHealth() > 0)
         {
             MovePlayer();
             RotatePlayer();
