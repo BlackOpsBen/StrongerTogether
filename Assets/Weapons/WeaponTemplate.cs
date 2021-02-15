@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaponTemplate : ScriptableObject
 {
     [SerializeField] float range;
+    [SerializeField] float rangeWhileMoving;
     [SerializeField] float firingArc;
     [SerializeField] float rateOfFire;
     [SerializeField] float damage;
@@ -20,8 +21,13 @@ public class WeaponTemplate : ScriptableObject
         return range;
     }
 
+    public float GetRangeWhileMoving()
+    {
+        return rangeWhileMoving;
+    }
+
     public void Shoot(Transform target)
     {
-        Debug.LogWarning(name + " fired at " + target.name);
+        
     }
 }

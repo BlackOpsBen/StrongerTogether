@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class TargetEnemies : MonoBehaviour
 {
-    [SerializeField] WeaponTemplate weapon;
-
-    CircleCollider2D circleCollider;
+    public WeaponTemplate weapon;
 
     public List<Transform> rangedTargets = new List<Transform>();
 
     public List<Transform> arcTargets = new List<Transform>();
 
     public Transform actualTarget;
-
-    private void Start()
-    {
-        circleCollider = GetComponent<CircleCollider2D>();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

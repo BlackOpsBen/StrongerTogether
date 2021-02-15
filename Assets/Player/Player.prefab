@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3261774524549477217}
   - component: {fileID: 3261774524549477218}
   - component: {fileID: 2644570524013287693}
+  - component: {fileID: 5246217970100954704}
   m_Layer: 0
   m_Name: Facing
   m_TagString: Untagged
@@ -74,6 +75,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: a3ccdf4787c45044e9b5e65184678120, type: 2}
+  rangedTargets: []
+  arcTargets: []
+  actualTarget: {fileID: 0}
+--- !u!114 &5246217970100954704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261774524549477223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd654b636826814cbbd4b553598b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleCollider: {fileID: 3261774524549477218}
+  targetEnemies: {fileID: 2644570524013287693}
 --- !u!1 &3261774524731607467
 GameObject:
   m_ObjectHideFlags: 0

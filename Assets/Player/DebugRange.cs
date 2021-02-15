@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class DebugRange : MonoBehaviour
 {
-    private float range = 3.0f;
+    private TargetEnemies targetEnemies;
+
+    private void Start()
+    {
+        targetEnemies = GetComponent<TargetEnemies>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawLine(transform.position, transform.position + transform.right * range, Color.red);
+        Debug.DrawLine(transform.position, transform.position + transform.right * targetEnemies.weapon.GetRange(), Color.red);
     }
 }

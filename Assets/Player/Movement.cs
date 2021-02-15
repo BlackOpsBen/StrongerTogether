@@ -55,6 +55,18 @@ public class Movement : MonoBehaviour
         isActive = value;
     }
 
+    public bool GetIsMoving()
+    {
+        if (movement.magnitude > float.Epsilon)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     private void OnEnable()
     {
         controls.DefaultActionMap.Enable();
