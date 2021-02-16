@@ -6,6 +6,6 @@ public class EnemyDeath : MonoBehaviour, IDie
 {
     public void Die()
     {
-        
+        gameObject.SetActive(false);
     }
 }
