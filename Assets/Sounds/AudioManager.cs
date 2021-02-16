@@ -5,21 +5,40 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public const int DIALOG_SELECTED = 0;
+    public const int DIALOG_KILL = 1;
+    public const int DIALOG_HURT = 2;
+    public const int DIALOG_DEAD = 3;
+
     public static AudioManager Instance { get; private set; }
 
     [Header("SFX")]
     public Sound[] SFX;
 
     [Header("Characters")]
-    public SoundGroup[] characterSounds;
+    public SoundGroup[] characterSoundGroups;
 
     private void Awake()
     {
         SingletonPattern();
         CreateAudioSources(ref SFX);
-        for (int i = 0; i < characterSounds.Length; i++)
+        for (int i = 0; i < characterSoundGroups.Length; i++)
         {
-            CreateAudioSources(ref characterSounds[i].selected);
+            //CreateAudioSources(ref characterSoundGroups[i].selected);
+            for (int j = 0; j < characterSoundGroups[i].dialogCategories.Length; j++)
+            {
+                for (int k = 0; k < characterSoundGroups[i].dialogCategories[j].dialogsOptions.Length; k++)
+                {
+
+                }
+            }
+        }
+        foreach (SoundGroup sg in characterSoundGroups)
+        {
+            foreach (DialogCategory dc in sg.dialogCategories)
+            {
+                CreateAudioSources(ref dc.dialogsOptions);
+            }
         }
     }
 
@@ -65,14 +84,29 @@ public class AudioManager : MonoBehaviour
         s.source.loop = false;
         s.source.Stop();
     }
+
+    public void PlayDialog(int activePlayerIndex, int DIALOG_CATEGORY)
+    {
+        int selectedOption = 0;
+        Sound s = characterSoundGroups[activePlayerIndex].dialogCategories[DIALOG_CATEGORY].dialogsOptions[selectedOption];
+        if (!s.source.isPlaying)
+        {
+            s.source.Play();
+            Debug.Log("Played sound");
+        }
+    }
 }
 
 [System.Serializable]
 public class SoundGroup
 {
     public string name;
-    public Sound[] selected;
-    public Sound[] shooting;
-    public Sound[] hurt;
-    public Sound[] dying;
+    public DialogCategory[] dialogCategories;
+}
+
+[System.Serializable]
+public class DialogCategory
+{
+    public string name;
+    public Sound[] dialogsOptions;
 }

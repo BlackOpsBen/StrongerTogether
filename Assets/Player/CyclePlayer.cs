@@ -40,6 +40,7 @@ public class CyclePlayer : MonoBehaviour
             if (playerCharacters[currentPlayer].GetComponent<Health>().GetCurrentHealth() > 0)
             {
                 playerCharacters[currentPlayer].SetIsActive(true);
+                PlaySelectedDialog();
                 return;
             }
         }
@@ -57,6 +58,7 @@ public class CyclePlayer : MonoBehaviour
             currentPlayer--;
         }
         playerCharacters[currentPlayer].SetIsActive(true);
+        PlaySelectedDialog();
     }
 
     private void Select(int index)
@@ -68,6 +70,7 @@ public class CyclePlayer : MonoBehaviour
                 playerCharacters[currentPlayer].SetIsActive(false);
                 currentPlayer = index;
                 playerCharacters[currentPlayer].SetIsActive(true);
+                PlaySelectedDialog();
             }
         }
     }
@@ -80,5 +83,10 @@ public class CyclePlayer : MonoBehaviour
     private void OnDisable()
     {
         controls.DefaultActionMap.Disable();
+    }
+
+    private void PlaySelectedDialog()
+    {
+        AudioManager.Instance.PlayDialog(currentPlayer, AudioManager.DIALOG_SELECTED);
     }
 }

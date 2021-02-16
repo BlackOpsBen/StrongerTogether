@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1163,40 +1163,140 @@ MonoBehaviour:
   SFX:
   - name: Pistol
     clip: {fileID: 8300000, guid: 03cbb6b2d418cb14ab2d9df79cdda981, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Rifle
     clip: {fileID: 8300000, guid: 26ba2243dfa29c54aae5a6fa6fca42d2, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Machine Gun
     clip: {fileID: 8300000, guid: 57050ef3dcf1da444a92ba4795f0e55a, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     source: {fileID: 0}
-  characterSounds:
+  characterSoundGroups:
   - name: Char0
-    selected: []
-    shooting: []
-    hurt: []
-    dying: []
+    dialogCategories:
+    - name: Selected
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Kill
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Hurt
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Dead
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
   - name: Char1
-    selected: []
-    shooting: []
-    hurt: []
-    dying: []
+    dialogCategories:
+    - name: Selected
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Kill
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Hurt
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Dead
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
   - name: Char2
-    selected: []
-    shooting: []
-    hurt: []
-    dying: []
+    dialogCategories:
+    - name: Selected
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Kill
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Hurt
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Dead
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
   - name: Char3
-    selected: []
-    shooting: []
-    hurt: []
-    dying: []
+    dialogCategories:
+    - name: Selected
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Kill
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Hurt
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
+    - name: Dead
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        volume: 1
+        pitch: 1
+        source: {fileID: 0}
 --- !u!4 &803898092
 Transform:
   m_ObjectHideFlags: 0
