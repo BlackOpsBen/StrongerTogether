@@ -7,10 +7,12 @@ public class Health : MonoBehaviour
     [SerializeField] int maxHP = 5;
     private int currentHP;
     private IDie deathBehavior;
+    private IHurt hurtBehavior;
 
     private void Start()
     {
         deathBehavior = GetComponent<IDie>();
+        hurtBehavior = GetComponent<IHurt>();
         currentHP = maxHP;
     }
 
@@ -18,7 +20,14 @@ public class Health : MonoBehaviour
     {
         currentHP += amount;
         currentHP = Mathf.Min(maxHP, currentHP);
-        CheckForDeath();
+        if (currentHP < 1)
+        {
+            Die();
+        }
+        else if (amount < 0)
+        {
+            hurtBehavior.TriggerHurtBehavior();
+        }
     }
 
     public void SetHealth(int newHP)

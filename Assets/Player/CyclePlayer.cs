@@ -25,6 +25,11 @@ public class CyclePlayer : MonoBehaviour
     private void Start()
     {
         playerCharacters = FindObjectsOfType<Movement>();
+        for (int i = 0; i < playerCharacters.Length; i++)
+        {
+            playerCharacters[i].name = i.ToString();
+        }
+
         playerCharacters[currentPlayer].SetIsActive(true);
     }
 
@@ -87,6 +92,6 @@ public class CyclePlayer : MonoBehaviour
 
     private void PlaySelectedDialog()
     {
-        AudioManager.Instance.PlayDialog(currentPlayer, AudioManager.DIALOG_SELECTED);
+        AudioManager.Instance.PlayDialog(currentPlayer, AudioManager.DIALOG_SELECTED, false);
     }
 }

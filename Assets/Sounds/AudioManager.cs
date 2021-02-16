@@ -18,6 +18,11 @@ public class AudioManager : MonoBehaviour
     [Header("Characters")]
     public SoundGroup[] characterSoundGroups;
 
+    private bool someoneIsSpeaking = false;
+    private float speakingDuration = 0f;
+
+    private DialogLimiter dialogLimiter;
+
     private void Awake()
     {
         SingletonPattern();
@@ -54,6 +59,18 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (speakingDuration < 0.0f)
+        {
+            someoneIsSpeaking = false;
+        }
+        else
+        {
+            speakingDuration -= Time.deltaTime;
+        }
+    }
+
     private void CreateAudioSources(ref Sound[] sounds)
     {
         foreach (Sound s in sounds)
@@ -85,15 +102,27 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
-    public void PlayDialog(int activePlayerIndex, int DIALOG_CATEGORY)
+    public void PlayDialog(int playerIndex, int DIALOG_CATEGORY, bool oneAtATime)
     {
-        int selectedOption = 0;
-        Sound s = characterSoundGroups[activePlayerIndex].dialogCategories[DIALOG_CATEGORY].dialogsOptions[selectedOption];
-        if (!s.source.isPlaying)
+        int selectedOption = 0; // TODO randomize selectedOption
+        Sound s = characterSoundGroups[playerIndex].dialogCategories[DIALOG_CATEGORY].dialogsOptions[selectedOption];
+
+        if (oneAtATime)
         {
-            s.source.Play();
-            Debug.Log("Played sound");
+            if (someoneIsSpeaking || !dialogLimiter.GetCanSpeak(playerIndex))
+            {
+                return;
+            }
+            speakingDuration = s.source.clip.length;
+            someoneIsSpeaking = true;
         }
+
+        s.source.Play();
+    }
+
+    public bool GetIsSomeoneSpeaking()
+    {
+        return someoneIsSpeaking;
     }
 }
 

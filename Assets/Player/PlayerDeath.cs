@@ -6,6 +6,8 @@ public class PlayerDeath : MonoBehaviour, IDie
 {
     [SerializeField] GameObject[] objectsToDisableOnDeath;
 
+    [Header("Which player is this?")]
+
     private CircleCollider2D circleCollider;
 
     private void Start()
@@ -18,6 +20,8 @@ public class PlayerDeath : MonoBehaviour, IDie
         DisableObjects();
         DisableColliders();
         SelectNextPlayer();
+        AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_DEAD, false);
+        Debug.Log("gameObject.name as int is: " + int.Parse(gameObject.name));
     }
 
     private void DisableObjects()
