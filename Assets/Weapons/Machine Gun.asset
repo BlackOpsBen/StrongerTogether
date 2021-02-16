@@ -15,5 +15,5 @@ MonoBehaviour:
   range: 4
   rangeWhileMoving: 0
   firingArc: 30
-  rateOfFireRPS: 6
+  rateOfFireRPS: 10
   damage: 1

@@ -61,7 +61,8 @@ public class WeaponTemplate : ScriptableObject
         {
             targetHealth.ModifyHealth(-damage);
         }
-        Debug.Log("Shot fired!");
+
+        AudioManager.Instance.PlaySFX(name);
     }
 
     public void SetIsReady(bool value)
