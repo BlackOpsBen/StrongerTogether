@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
 
-    [SerializeField] int maxSpawn = 50;
+    [SerializeField] int maxSpawn = 10;
 
     [SerializeField] List<GameObject> waitingPool = new List<GameObject>();
     [SerializeField] List<GameObject> livingPool = new List<GameObject>();
@@ -27,6 +27,15 @@ public class Spawner : MonoBehaviour
         {
             Spawn();
             ResetCountdown();
+        }
+
+        for (int i = 0; i < livingPool.Count; i++)
+        {
+            if (!livingPool[i].activeSelf)
+            {
+                waitingPool.Add(livingPool[i]);
+                livingPool.RemoveAt(i);
+            }
         }
     }
 

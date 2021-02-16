@@ -51,10 +51,12 @@ public class Weapon : MonoBehaviour
 
     private void DimMuzzleFlash()
     {
-        if (flashIntensity > float.Epsilon)
+        if (flashIntensity > 0.0f)
         {
             flashIntensity -= Time.deltaTime * flashSpeed;
+            flashIntensity = Mathf.Clamp(flashIntensity, 0.0f, 1.0f);
         }
+
         for (int i = 0; i < muzzleFlashLights.Length; i++)
         {
             muzzleFlashLights[i].intensity = flashIntensity;
