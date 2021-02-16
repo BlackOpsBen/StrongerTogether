@@ -1,11 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField] WeaponTemplate equippedWeapon;
-    [SerializeField] GameObject muzzleFlash;
+    [SerializeField] Light2D[] muzzleFlashLights;
+
+    private float flashIntensity = 0.0f;
+    private float flashSpeed = 10f;
+
+    private void Update()
+    {
+        DimMuzzleFlash();
+    }
 
     public void PullTrigger(Transform target)
     {
@@ -37,23 +46,20 @@ public class Weapon : MonoBehaviour
 
     private void ShowMuzzleFlash()
     {
-
+        flashIntensity = 1.0f;
     }
 
-    /*public float GetFiringArc()
+    private void DimMuzzleFlash()
     {
-        return equippedWeapon.GetFiringArc();
+        if (flashIntensity > float.Epsilon)
+        {
+            flashIntensity -= Time.deltaTime * flashSpeed;
+        }
+        for (int i = 0; i < muzzleFlashLights.Length; i++)
+        {
+            muzzleFlashLights[i].intensity = flashIntensity;
+        }
     }
-
-    public float GetRange()
-    {
-        return equippedWeapon.GetRange();
-    }
-
-    public float GetRateOfFire()
-    {
-        return equippedWeapon.GetRateOfFire();
-    }*/
 
     public WeaponTemplate GetWeaponTemplate()
     {

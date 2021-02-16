@@ -332,7 +332,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedWeapon: {fileID: 11400000, guid: a3ccdf4787c45044e9b5e65184678120, type: 2}
-  muzzleFlash: {fileID: 4503971177757859041}
+  muzzleFlashLights:
+  - {fileID: 1721926975104475967}
+  - {fileID: 7045767249189576773}
 --- !u!114 &5438975814394774535
 MonoBehaviour:
   m_ObjectHideFlags: 0
