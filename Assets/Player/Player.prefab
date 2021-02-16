@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facing: {fileID: 3261774524549477216}
   movementSpeed: 3
-  rotationSpeed: 10
+  rotationSpeed: 5
 --- !u!58 &3261774524731607463
 CircleCollider2D:
   m_ObjectHideFlags: 0
