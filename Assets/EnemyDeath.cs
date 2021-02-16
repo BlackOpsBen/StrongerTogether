@@ -6,7 +6,6 @@ public class EnemyDeath : MonoBehaviour, IDie
 {
     public void Die()
     {
-        Debug.Log("Enemy killed");
-        Destroy(gameObject);
+        
     }
 }
