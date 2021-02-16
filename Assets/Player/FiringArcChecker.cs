@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FiringArcChecker : MonoBehaviour
 {
-    private TargetEnemies targetEnemies;
+    private Weapon weapon;
     private DrawFiringArc drawFiringArc;
 
     [SerializeField] Transform arcLimit1;
@@ -22,9 +22,9 @@ public class FiringArcChecker : MonoBehaviour
 
     private void Start()
     {
-        targetEnemies = GetComponent<TargetEnemies>();
+        weapon = GetComponent<Weapon>();
         drawFiringArc = GetComponent<DrawFiringArc>();
-        arcSizeDegrees = targetEnemies.weapon.GetFiringArc();
+        arcSizeDegrees = weapon.GetWeaponTemplate().GetFiringArc();
         halfArc = arcSizeDegrees / 2;
     }
 
@@ -33,7 +33,7 @@ public class FiringArcChecker : MonoBehaviour
     {
         SetArcRotations();
 
-        Vector2 heading = transform.position + transform.right * targetEnemies.weapon.GetRange();
+        Vector2 heading = transform.position + transform.right * weapon.GetWeaponTemplate().GetRange();
         Vector2 arc1Heading = transform.position + arcLimit1.right * circleCollider.radius;
         Vector2 arc2Heading = transform.position + arcLimit2.right * circleCollider.radius;
 

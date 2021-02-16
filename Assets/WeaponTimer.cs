@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class WeaponTimer : MonoBehaviour
 {
-    private WeaponTemplate weapon;
+    private Weapon weapon;
     private float rateOfFireRPS;
     private float interval;
     private float reloadTimer;
 
     private void Start()
     {
-        weapon = GetComponent<TargetEnemies>().weapon;
-        rateOfFireRPS = weapon.GetRateOfFire();
+        weapon = GetComponent<Weapon>();
+        rateOfFireRPS = weapon.GetWeaponTemplate().GetRateOfFire();
         interval = 1 / rateOfFireRPS;
         reloadTimer = interval;
-        weapon.SetReloadTimer(reloadTimer);
+        weapon.GetWeaponTemplate().SetReloadTimer(reloadTimer);
     }
 
     private void Update()
     {
-        reloadTimer = weapon.GetReloadTimer();
+        reloadTimer = weapon.GetWeaponTemplate().GetReloadTimer();
 
         if (reloadTimer < interval)
         {
-            weapon.SetReloadTimer(reloadTimer += Time.deltaTime);
+            weapon.GetWeaponTemplate().SetReloadTimer(reloadTimer += Time.deltaTime);
         }
         else
         {
-            weapon.SetIsReady(true);
+            weapon.GetWeaponTemplate().SetIsReady(true);
         }
     }
 }

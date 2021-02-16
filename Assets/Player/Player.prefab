@@ -115,9 +115,10 @@ GameObject:
   - component: {fileID: 3261774524549477218}
   - component: {fileID: 2644570524013287693}
   - component: {fileID: 5246217970100954704}
-  - component: {fileID: 1476738590}
   - component: {fileID: 9060615250114566878}
   - component: {fileID: 7158849496688248597}
+  - component: {fileID: 9005970344162113000}
+  - component: {fileID: 5438975814394774535}
   m_Layer: 0
   m_Name: Facing
   m_TagString: Untagged
@@ -183,7 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff44d1f37295f64ead194846253983f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: a3ccdf4787c45044e9b5e65184678120, type: 2}
   rangedTargets: []
   arcTargets: []
   actualTarget: {fileID: 0}
@@ -201,19 +201,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeSpeed: 5
   circleCollider: {fileID: 3261774524549477218}
-  targetEnemies: {fileID: 2644570524013287693}
---- !u!114 &1476738590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3261774524549477223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1c31941dfcfc240bc2939f9c70087b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!120 &9060615250114566878
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -330,6 +317,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 009928d552f320447a5ca55fdd47bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9005970344162113000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261774524549477223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b69fe5a946b6e247a5a33f5fe697940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equippedWeapon: {fileID: 11400000, guid: a3ccdf4787c45044e9b5e65184678120, type: 2}
+  muzzleFlash: {fileID: 4503971177757859041}
+--- !u!114 &5438975814394774535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261774524549477223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1c31941dfcfc240bc2939f9c70087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3261774524731607467

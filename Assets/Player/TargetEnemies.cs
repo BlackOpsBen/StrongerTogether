@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TargetEnemies : MonoBehaviour
 {
-    public WeaponTemplate weapon;
+    //public WeaponTemplate weapon;
 
     public List<Transform> rangedTargets = new List<Transform>();
 
@@ -14,9 +14,12 @@ public class TargetEnemies : MonoBehaviour
 
     private FiringArcChecker firingArcChecker;
 
+    private Weapon weapon;
+
     private void Start()
     {
         firingArcChecker = GetComponent<FiringArcChecker>();
+        weapon = GetComponent<Weapon>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

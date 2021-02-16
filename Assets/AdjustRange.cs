@@ -6,11 +6,13 @@ public class AdjustRange : MonoBehaviour
 {
     [SerializeField] float rangeSpeed = 5.0f;
     [SerializeField] CircleCollider2D circleCollider;
-    [SerializeField] TargetEnemies targetEnemies;
+    //[SerializeField] TargetEnemies targetEnemies;
+    private Weapon weapon;
     private Movement movement;
 
     private void Start()
     {
+        weapon = GetComponent<Weapon>();
         movement = GetComponentInParent<Movement>();
     }
 
@@ -19,11 +21,11 @@ public class AdjustRange : MonoBehaviour
         float range;
         if (movement.GetIsMoving())
         {
-            range = targetEnemies.weapon.GetRangeWhileMoving();
+            range = weapon.GetWeaponTemplate().GetRangeWhileMoving();
         }
         else
         {
-            range = targetEnemies.weapon.GetRange();
+            range = weapon.GetWeaponTemplate().GetRange();
         }
         circleCollider.radius = Mathf.Lerp(circleCollider.radius, range, Time.deltaTime * rangeSpeed);
     }

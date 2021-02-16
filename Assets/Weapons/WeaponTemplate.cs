@@ -44,29 +44,18 @@ public class WeaponTemplate : ScriptableObject
         return rateOfFireRPS;
     }
 
-    public void PullTrigger(Transform target)
-    {
-        if (isReady)
-        {
-            FireShot(target);
-            isReady = false;
-            SetReloadTimer(0.0f);
-        }
-    }
-
-    private void FireShot(Transform target)
-    {
-        Health targetHealth = target.GetComponent<Health>();
-        if (targetHealth != null)
-        {
-            targetHealth.ModifyHealth(-damage);
-        }
-
-        AudioManager.Instance.PlaySFX(name);
-    }
-
     public void SetIsReady(bool value)
     {
         isReady = value;
+    }
+
+    public bool GetIsReady()
+    {
+        return isReady;
+    }
+
+    public int GetDamage()
+    {
+        return damage;
     }
 }
