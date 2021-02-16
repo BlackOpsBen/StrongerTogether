@@ -31,12 +31,9 @@ public class Weapon : MonoBehaviour
         DealDamage(target);
 
         AudioManager.Instance.PlaySFX(equippedWeapon.name);
+        int currentPlayerIndex = int.Parse(transform.parent.name);
 
-        //Debug.LogWarning(transform.parent.name);
-        //Debug.LogWarning(transform.parent.gameObject.name);
-        //int currentPlayerIndex = int.Parse(transform.parent.gameObject.name);
-
-        //AudioManager.Instance.PlayDialog(currentPlayerIndex, AudioManager.DIALOG_KILL, true);
+        AudioManager.Instance.PlayDialog(currentPlayerIndex, AudioManager.DIALOG_KILL, true);
 
         ShowMuzzleFlash();
     }

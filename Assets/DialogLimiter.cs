@@ -31,4 +31,16 @@ public class DialogLimiter : MonoBehaviour
         }
         return false;
     }
+
+    public void SetCanSpeak(int playerIndex, bool value)
+    {
+        if (value)
+        {
+            timers[playerIndex] = -1.0f;
+        }
+        else
+        {
+            timers[playerIndex] = interval;
+        }
+    }
 }

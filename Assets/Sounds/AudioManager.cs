@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        dialogLimiter = GetComponent<DialogLimiter>();
         SingletonPattern();
         CreateAudioSources(ref SFX);
         for (int i = 0; i < characterSoundGroups.Length; i++)
@@ -115,6 +116,7 @@ public class AudioManager : MonoBehaviour
             }
             speakingDuration = s.source.clip.length;
             someoneIsSpeaking = true;
+            dialogLimiter.SetCanSpeak(playerIndex, false);
         }
 
         s.source.Play();
