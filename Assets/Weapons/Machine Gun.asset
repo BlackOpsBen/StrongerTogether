@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Machine Gun
   m_EditorClassIdentifier: 
   range: 7
-  rangeWhileMoving: 0
+  rangeWhileMoving: 4
   firingArc: 60
   rateOfFireRPS: 10
   damage: 1

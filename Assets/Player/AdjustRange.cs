@@ -6,6 +6,7 @@ public class AdjustRange : MonoBehaviour
 {
     [SerializeField] float rangeSpeed = 5.0f;
     [SerializeField] CircleCollider2D circleCollider;
+    [SerializeField] Transform aimSpotParent;
     //[SerializeField] TargetEnemies targetEnemies;
     private Weapon weapon;
     private Movement movement;
@@ -28,5 +29,6 @@ public class AdjustRange : MonoBehaviour
             range = weapon.GetWeaponTemplate().GetRange();
         }
         circleCollider.radius = Mathf.Lerp(circleCollider.radius, range, Time.deltaTime * rangeSpeed);
+        aimSpotParent.localScale = new Vector3(circleCollider.radius, circleCollider.radius);
     }
 }

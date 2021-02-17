@@ -6,6 +6,7 @@ public class MovementAnimation : MonoBehaviour
 {
     [SerializeField] Animator spriteAnimator;
     [SerializeField] Animator muzzlePosAnimator;
+    [SerializeField] Animator headlampPosAnimator;
     [SerializeField] Transform facingTarget;
     private Movement movement;
 
@@ -26,7 +27,7 @@ public class MovementAnimation : MonoBehaviour
     {
         Vector2 vector = facingTarget.position - transform.position;
         UpdateSpriteAnimator(vector);
-        UpdateMuzzleAnimator(vector);
+        UpdatePosAnimators(vector);
     }
 
     private void UpdateSpriteAnimator(Vector2 vector)
@@ -36,7 +37,7 @@ public class MovementAnimation : MonoBehaviour
         spriteAnimator.SetBool("isMoving", movement.GetIsMoving());
     }
 
-    private void UpdateMuzzleAnimator(Vector2 vector)
+    private void UpdatePosAnimators(Vector2 vector)
     {
         int nearestVectorIndex = 0;
         float distance = Vector2.Distance(vector, vectors[nearestVectorIndex]);
@@ -53,5 +54,8 @@ public class MovementAnimation : MonoBehaviour
 
         muzzlePosAnimator.SetFloat("Horizontal", vectors[nearestVectorIndex].x);
         muzzlePosAnimator.SetFloat("Vertical", vectors[nearestVectorIndex].y);
+
+        headlampPosAnimator.SetFloat("Horizontal", vectors[nearestVectorIndex].x);
+        headlampPosAnimator.SetFloat("Vertical", vectors[nearestVectorIndex].y);
     }
 }
