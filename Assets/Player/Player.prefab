@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2190115151043750731}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ArcLimit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699343876747916111}
   - component: {fileID: 7045767249189576773}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7158849496688248597}
   - component: {fileID: 9005970344162113000}
   - component: {fileID: 5438975814394774535}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Facing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arcLimit1: {fileID: 2522912603245424858}
   arcLimit2: {fileID: 2190115151043750731}
+  circleCollider: {fileID: 0}
 --- !u!58 &3261774524549477218
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -347,6 +348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1c31941dfcfc240bc2939f9c70087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rateOfFireRPS: 0
+  interval: 0
+  reloadTimer: 0
 --- !u!1 &3261774524731607467
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +367,7 @@ GameObject:
   - component: {fileID: 4660640476781378070}
   - component: {fileID: 8731166513679555143}
   - component: {fileID: 1945430961}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,6 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+  currentHP: 0
 --- !u!114 &4660640476781378070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3261774525539720105}
   - component: {fileID: 3261774525539720106}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AmbientLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +587,7 @@ GameObject:
   - component: {fileID: 3261774526555098665}
   - component: {fileID: 3261774526555098666}
   - component: {fileID: 383022860}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47127480348002292}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FacingTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4888976905421177521}
   - component: {fileID: 1721926975104475967}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprite Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7934804584397437939}
   - component: {fileID: 4202709498795251936}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8139030005610720281}
   - component: {fileID: 7662651405398072724}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -910,7 +915,7 @@ GameObject:
   - component: {fileID: 6937319525272273478}
   - component: {fileID: 5522712739655652771}
   - component: {fileID: 179450760581012103}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractionRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2522912603245424858}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ArcLimit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

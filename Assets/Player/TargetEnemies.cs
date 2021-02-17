@@ -81,10 +81,14 @@ public class TargetEnemies : MonoBehaviour
     {
         List<Transform> toRemove = new List<Transform>();
 
+        /*ContactFilter2D filter = new ContactFilter2D();
+        LayerMask mask = LayerMask.GetMask("")*/
+        
+
         foreach (Transform target in arcTargets)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position - transform.position, firingArcChecker.circleCollider.radius);
-            Debug.Log("RaycastHit: " + hit.collider.name);
+            //Debug.Log("RaycastHit: " + hit.collider.name);
         }
     }
 

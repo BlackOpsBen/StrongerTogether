@@ -56,12 +56,13 @@ public class CyclePlayer : MonoBehaviour
         playerCharacters[currentPlayer].SetIsActive(false);
         if (currentPlayer == 0)
         {
-            currentPlayer = playerCharacters.Length;
+            currentPlayer = playerCharacters.Length - 1;
         }
         else
         {
             currentPlayer--;
         }
+        Debug.Log("currentPlayer " + currentPlayer);
         playerCharacters[currentPlayer].SetIsActive(true);
         PlaySelectedDialog();
     }
