@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class OpenClose : MonoBehaviour, IInteract
 {
-    [SerializeField] Collider2D closedCollider;
+    [SerializeField] Collider2D thisCollider;
+    [SerializeField] Collider2D thatCollider;
+    [SerializeField] bool startDisabled;
+    [SerializeField] Sprite disabledState;
+    [SerializeField] Sprite enabledState;
 
     private InteractionTimer timer;
     private bool isTimed = false;
 
     private void Awake()
     {
+        if (startDisabled)
+        {
+            thisCollider.enabled = false;
+        }
+
         timer = GetComponent<InteractionTimer>();
         if (timer != null)
         {
@@ -41,6 +50,7 @@ public class OpenClose : MonoBehaviour, IInteract
     private void CompleteInteraction()
     {
         Debug.LogWarning("Toggling door collider");
-        closedCollider.enabled = !closedCollider.enabled;
+        thisCollider.enabled = !thisCollider.enabled;
+        thatCollider.enabled = !thisCollider.enabled;
     }
 }
