@@ -79,16 +79,19 @@ public class TargetEnemies : MonoBehaviour
 
     private void RemoveBlockedTargets()
     {
-        List<Transform> toRemove = new List<Transform>();
-
-        /*ContactFilter2D filter = new ContactFilter2D();
-        LayerMask mask = LayerMask.GetMask("")*/
-        
+        List<Transform> toRemove = new List<Transform>();        
 
         foreach (Transform target in arcTargets)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position - transform.position, firingArcChecker.circleCollider.radius);
-            //Debug.Log("RaycastHit: " + hit.collider.name);
+            if (!hit.collider.CompareTag("Target"))
+            {
+                toRemove.Add(target);
+            }
+        }
+        foreach (Transform targetToRemove in toRemove)
+        {
+            arcTargets.Remove(targetToRemove);
         }
     }
 
