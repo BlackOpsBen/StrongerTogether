@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7df4cec247ac04ab2c2b51ebe032d3, type: 3}
   m_Name: Machine Gun
   m_EditorClassIdentifier: 
-  range: 4
+  range: 7
   rangeWhileMoving: 0
   firingArc: 60
   rateOfFireRPS: 10
