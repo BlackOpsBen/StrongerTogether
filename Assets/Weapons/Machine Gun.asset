@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 4
   rangeWhileMoving: 0
-  firingArc: 30
+  firingArc: 60
   rateOfFireRPS: 10
   damage: 1

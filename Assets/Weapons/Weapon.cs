@@ -11,6 +11,14 @@ public class Weapon : MonoBehaviour
     private float flashIntensity = 0.0f;
     private float flashSpeed = 10f;
 
+    private WeaponTimer weaponTimer;
+
+    private void Awake()
+    {
+        weaponTimer = GetComponent<WeaponTimer>();
+        weaponTimer.InitializeROF(equippedWeapon.GetRateOfFire());
+    }
+
     private void Update()
     {
         DimMuzzleFlash();
@@ -18,11 +26,17 @@ public class Weapon : MonoBehaviour
 
     public void PullTrigger(Transform target)
     {
-        if (equippedWeapon.GetIsReady())
+        /*if (equippedWeapon.GetIsReady())
         {
             FireShot(target);
             equippedWeapon.SetIsReady(false);
-            equippedWeapon.SetReloadTimer(0.0f);
+            //equippedWeapon.SetReloadTimer(0.0f);
+            weaponTimer.Reset();
+        }*/
+        if (weaponTimer.GetIsReady())
+        {
+            FireShot(target);
+            weaponTimer.Reset();
         }
     }
 

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7df4cec247ac04ab2c2b51ebe032d3, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  range: 3
-  rangeWhileMoving: 1
-  firingArc: 360
-  rateOfFireRPS: 2
-  damage: 1
+  range: 4
+  rangeWhileMoving: 3
+  firingArc: 60
+  rateOfFireRPS: 3
+  damage: 3

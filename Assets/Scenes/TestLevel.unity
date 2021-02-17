@@ -4367,6 +4367,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9005970344162113000, guid: 7657c1013d86a1149af1baebf9e6f355,
+        type: 3}
+      propertyPath: equippedWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: a3ccdf4787c45044e9b5e65184678120,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7657c1013d86a1149af1baebf9e6f355, type: 3}
 --- !u!1001 &3261774525306369004
@@ -4436,6 +4442,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 9005970344162113000, guid: 7657c1013d86a1149af1baebf9e6f355,
+        type: 3}
+      propertyPath: equippedWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 61ae6a2003aea12439de113b0bdbf834,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7657c1013d86a1149af1baebf9e6f355, type: 3}
 --- !u!1001 &9066931663133191226

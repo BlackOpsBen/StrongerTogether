@@ -66,6 +66,7 @@ public class Spawner : MonoBehaviour
     {
         enemy.transform.position = transform.position;
         enemy.SetActive(true);
+        enemy.GetComponent<Health>().ResetHealth();
     }
 
     private GameObject InstantiateNewEnemy()

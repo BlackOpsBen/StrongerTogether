@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0c2376930ecd246b520f056ae48f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
+  maxHP: 10
 --- !u!114 &3232149907556252251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 6937315396424949940}
+  chaseDistance: 10
+  waypointArrivalDist: 2
 --- !u!114 &4562043996156166410
 MonoBehaviour:
   m_ObjectHideFlags: 0

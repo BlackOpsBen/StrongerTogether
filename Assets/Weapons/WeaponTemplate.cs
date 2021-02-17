@@ -11,18 +11,18 @@ public class WeaponTemplate : ScriptableObject
     [SerializeField] float rateOfFireRPS;
     [SerializeField] int damage;
 
-    private bool isReady = true;
-    private float reloadTimer;
+    //private bool isReady = true;
+    //private float reloadTimer;
 
-    public float GetReloadTimer()
+    /*public float GetReloadTimer()
     {
         return reloadTimer;
-    }
+    }*/
 
-    public void SetReloadTimer(float newValue)
+    /*public void SetReloadTimer(float newValue)
     {
         reloadTimer = newValue;
-    }
+    }*/
 
     public float GetFiringArc()
     {
@@ -44,15 +44,15 @@ public class WeaponTemplate : ScriptableObject
         return rateOfFireRPS;
     }
 
-    public void SetIsReady(bool value)
+    /*public void SetIsReady(bool value)
     {
         isReady = value;
-    }
+    }*/
 
-    public bool GetIsReady()
+    /*public bool GetIsReady()
     {
         return isReady;
-    }
+    }*/
 
     public int GetDamage()
     {

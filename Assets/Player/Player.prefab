@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b69fe5a946b6e247a5a33f5fe697940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equippedWeapon: {fileID: 11400000, guid: a3ccdf4787c45044e9b5e65184678120, type: 2}
+  equippedWeapon: {fileID: 11400000, guid: 9fb59576805f1544ea65b8e4b951cbe9, type: 2}
   muzzleFlashLights:
   - {fileID: 1721926975104475967}
   - {fileID: 7045767249189576773}

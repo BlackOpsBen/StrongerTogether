@@ -6,37 +6,80 @@ using Pathfinding;
 public class MoveTowardPlayer : MonoBehaviour
 {
     [SerializeField] AIPath path;
+    [SerializeField] float chaseDistance = 20f;
+
+    private GameObject[] waypoints;
+    private bool headedToWaypoint = false;
+    private Transform targetWaypoint;
+    [SerializeField] float waypointArrivalDist = 2f;
+
+    private void Start()
+    {
+        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        HeadToRandomWaypoint();
+    }
 
     private void Update()
     {
-        Movement[] potentialTargets = FindObjectsOfType<Movement>();
+        Movement[] potentialPlayerTargets = FindObjectsOfType<Movement>();
 
-        List<Movement> livingPlayers = new List<Movement>();
+        List<Movement> validPlayerTargets = new List<Movement>();
 
-        for (int i = 0; i < potentialTargets.Length; i++)
+        for (int i = 0; i < potentialPlayerTargets.Length; i++)
         {
-            if (potentialTargets[i].GetComponent<Health>().GetCurrentHealth() > 0)
+            bool isWithinChaseDist = Vector2.Distance(potentialPlayerTargets[i].transform.position, transform.position) < chaseDistance;
+            bool playerIsAlive = potentialPlayerTargets[i].GetComponent<Health>().GetCurrentHealth() > 0;
+            
+            if (isWithinChaseDist && playerIsAlive)
             {
-                livingPlayers.Add(potentialTargets[i]);
+                validPlayerTargets.Add(potentialPlayerTargets[i]);
             }
         }
 
-        if (livingPlayers.Count > 0)
+        if (validPlayerTargets.Count > 0)
         {
-            Transform closestPlayer = livingPlayers[0].transform;
+            Transform closestPlayer = validPlayerTargets[0].transform;
             float distance = Vector3.Distance(transform.position, closestPlayer.position);
 
-            for (int i = 1; i < livingPlayers.Count; i++)
+            for (int i = 1; i < validPlayerTargets.Count; i++)
             {
-                float nextDistance = Vector3.Distance(transform.position, livingPlayers[i].transform.position);
+                float nextDistance = Vector3.Distance(transform.position, validPlayerTargets[i].transform.position);
                 if (nextDistance < distance)
                 {
-                    closestPlayer = livingPlayers[i].transform;
+                    closestPlayer = validPlayerTargets[i].transform;
                     distance = nextDistance;
                 }
             }
 
             path.destination = closestPlayer.position;
+            headedToWaypoint = false;
         }
+        else
+        {
+            if (Vector2.Distance(transform.position, targetWaypoint.position) < waypointArrivalDist)
+            {
+                headedToWaypoint = false;
+            }
+            if (!headedToWaypoint)
+            {
+                HeadToRandomWaypoint();
+            }
+        }
+    }
+
+    private void HeadToRandomWaypoint()
+    {
+        headedToWaypoint = true;
+        int rand = UnityEngine.Random.Range(0, waypoints.Length);
+        targetWaypoint = waypoints[rand].transform;
+        path.destination = targetWaypoint.position;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, chaseDistance);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, waypointArrivalDist);
     }
 }
