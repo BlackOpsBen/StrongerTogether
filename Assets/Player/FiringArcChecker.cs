@@ -73,11 +73,12 @@ public class FiringArcChecker : MonoBehaviour
 
     public bool CheckIsInArc(Transform target)
     {
-        Quaternion rotTarget = Quaternion.LookRotation(target.position - transform.position);
-        Quaternion rotHeading = Quaternion.LookRotation(transform.right);
-        float angleBetween = Quaternion.Angle(rotTarget, rotHeading);
+        Vector2 a = target.position - transform.position;
+        Vector2 b = transform.right;
 
-        if (angleBetween > halfArc)
+        float angle = Vector2.Angle(a, b);
+
+        if (angle > halfArc)
         {
             return false;
         }
