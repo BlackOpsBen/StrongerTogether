@@ -57,11 +57,12 @@ public class OpenClose : MonoBehaviour, IInteract
 
     private void CompleteInteraction()
     {
-        Debug.LogWarning("Toggling door collider");
         thisCollider.enabled = !thisCollider.enabled;
         thatCollider.enabled = !thisCollider.enabled;
         ToggleSprite();
         thatCollider.GetComponent<OpenClose>().ToggleSprite();
+
+        timer.ResetProgress();
     }
 
     public void ToggleSprite()

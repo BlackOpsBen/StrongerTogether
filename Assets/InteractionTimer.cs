@@ -26,7 +26,7 @@ public class InteractionTimer : MonoBehaviour
 
         timer = Mathf.Clamp(timer, 0.0f, duration);
 
-        int progressFrameIndex = Mathf.CeilToInt(Mathf.Lerp(0f, progressFrames.Length-1, timer / duration));
+        int progressFrameIndex = Mathf.FloorToInt(Mathf.Lerp(0f, progressFrames.Length-1, timer / duration));
         sr.sprite = progressFrames[progressFrameIndex];
     }
 
@@ -39,5 +39,10 @@ public class InteractionTimer : MonoBehaviour
     public float GetProgress()
     {
         return timer / duration;
+    }
+
+    public void ResetProgress()
+    {
+        timer = 0.0f;
     }
 }
