@@ -17,8 +17,6 @@ public class Movement : MonoBehaviour
 
     private Health health;
 
-    [SerializeField] MovementAnimation mAnimation;
-
     private void Awake()
     {
         health = GetComponent<Health>();
@@ -35,7 +33,6 @@ public class Movement : MonoBehaviour
         {
             MovePlayer();
             RotatePlayer();
-            mAnimation.UpdateAnimator(movement);
         }
     }
 
@@ -72,6 +69,11 @@ public class Movement : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public Vector2 GetInput()
+    {
+        return movement;
     }
 
     private void OnEnable()

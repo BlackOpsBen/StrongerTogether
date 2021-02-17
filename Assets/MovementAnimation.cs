@@ -5,18 +5,24 @@ using UnityEngine;
 public class MovementAnimation : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] Transform facingTarget;
+    private Movement movement;
 
-    public void UpdateAnimator(Vector2 movement)
+    private void Start()
     {
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        if (movement.magnitude > float.Epsilon)
-        {
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetBool("isMoving", false);
-        }
+        movement = GetComponent<Movement>();
+    }
+
+    private void Update()
+    {
+        Vector2 vector = facingTarget.position - transform.position;
+        UpdateAnimator(vector);
+    }
+
+    public void UpdateAnimator(Vector2 vector)
+    {
+        animator.SetFloat("Horizontal", vector.x);
+        animator.SetFloat("Vertical", vector.y);
+        animator.SetBool("isMoving", movement.GetIsMoving());
     }
 }
