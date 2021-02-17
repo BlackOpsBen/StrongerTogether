@@ -10,7 +10,7 @@ public class FiringArcChecker : MonoBehaviour
     [SerializeField] Transform arcLimit1;
     [SerializeField] Transform arcLimit2;
 
-    private CircleCollider2D circleCollider;
+    public CircleCollider2D circleCollider;
 
     float arcSizeDegrees;
     float halfArc;

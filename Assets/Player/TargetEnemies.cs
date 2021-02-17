@@ -42,6 +42,7 @@ public class TargetEnemies : MonoBehaviour
     {
         RemoveDeadTargets();
         FindTargetsInArc();
+        RemoveBlockedTargets();
         if (arcTargets.Count > 0)
         {
             actualTarget = FindClosestTarget();
@@ -73,6 +74,17 @@ public class TargetEnemies : MonoBehaviour
             {
                 arcTargets.Add(rangedTargets[i]);
             }
+        }
+    }
+
+    private void RemoveBlockedTargets()
+    {
+        List<Transform> toRemove = new List<Transform>();
+
+        foreach (Transform target in arcTargets)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position - transform.position, firingArcChecker.circleCollider.radius);
+            Debug.Log("RaycastHit: " + hit.collider.name);
         }
     }
 
