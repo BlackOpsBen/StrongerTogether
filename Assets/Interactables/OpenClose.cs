@@ -10,14 +10,22 @@ public class OpenClose : MonoBehaviour, IInteract
     [SerializeField] Sprite disabledState;
     [SerializeField] Sprite enabledState;
 
+    private SpriteRenderer sr;
+
     private InteractionTimer timer;
     private bool isTimed = false;
 
     private void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
         if (startDisabled)
         {
             thisCollider.enabled = false;
+            sr.sprite = disabledState;
+        }
+        else
+        {
+            sr.sprite = enabledState;
         }
 
         timer = GetComponent<InteractionTimer>();
@@ -52,5 +60,19 @@ public class OpenClose : MonoBehaviour, IInteract
         Debug.LogWarning("Toggling door collider");
         thisCollider.enabled = !thisCollider.enabled;
         thatCollider.enabled = !thisCollider.enabled;
+        ToggleSprite();
+        thatCollider.GetComponent<OpenClose>().ToggleSprite();
+    }
+
+    public void ToggleSprite()
+    {
+        if (thisCollider.enabled)
+        {
+            sr.sprite = enabledState;
+        }
+        else
+        {
+            sr.sprite = disabledState;
+        }
     }
 }
