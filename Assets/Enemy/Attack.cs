@@ -8,14 +8,17 @@ public class Attack : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Health playerHealth = collision.collider.GetComponent<Health>();
-        if (playerHealth != null)
+        if (collision.collider.GetComponent<Movement>())
         {
-            playerHealth.ModifyHealth(-attackDamage);
-
-            if (playerHealth.GetCurrentHealth() > 0)
+            Health playerHealth = collision.collider.GetComponent<Health>();
+            if (playerHealth != null)
             {
-                GetComponent<Health>().SetHealth(0);
+                playerHealth.ModifyHealth(-attackDamage);
+
+                if (playerHealth.GetCurrentHealth() > 0)
+                {
+                    GetComponent<Health>().SetHealth(0);
+                }
             }
         }
     }
