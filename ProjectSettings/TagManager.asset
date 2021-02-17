@@ -54,3 +54,9 @@ TagManager:
   - name: FrontWalls
     uniqueID: 2846817245
     locked: 0
+  - name: Doodads
+    uniqueID: 3442832793
+    locked: 0
+  - name: HUD
+    uniqueID: 855272849
+    locked: 0
