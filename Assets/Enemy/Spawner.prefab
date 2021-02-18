@@ -45,4 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 341397897251918928, guid: 0a0fed4e99070b7418be26b87a74feb2,
     type: 3}
-  maxSpawn: 50
+  maxSpawn: 5
+  waitingPool: []
+  livingPool: []
