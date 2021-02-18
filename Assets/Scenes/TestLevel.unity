@@ -6644,7 +6644,7 @@ PrefabInstance:
     - target: {fileID: 383022860, guid: 7657c1013d86a1149af1baebf9e6f355, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: ff716adae1c39104bbaa83978b115320, type: 2}
+      objectReference: {fileID: 9100000, guid: e9faf91ae325ff94bbc141b775fd0e49, type: 2}
     - target: {fileID: 1301542497619823591, guid: 7657c1013d86a1149af1baebf9e6f355,
         type: 3}
       propertyPath: m_Mesh
@@ -6714,6 +6714,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261774526555098666, guid: 7657c1013d86a1149af1baebf9e6f355,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 23dd69d04adbc3243802f75ab1586cb7,
+        type: 3}
+    - target: {fileID: 3261774526555098666, guid: 7657c1013d86a1149af1baebf9e6f355,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261774526555098666, guid: 7657c1013d86a1149af1baebf9e6f355,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261774526555098666, guid: 7657c1013d86a1149af1baebf9e6f355,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7657c1013d86a1149af1baebf9e6f355, type: 3}
