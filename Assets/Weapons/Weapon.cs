@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] WeaponTemplate equippedWeapon;
     [SerializeField] Light2D[] muzzleFlashLights;
+    [SerializeField] SpriteRenderer[] muzzleFlashSprites;
 
     private float flashIntensity = 0.0f;
     private float flashSpeed = 10f;
@@ -74,9 +75,14 @@ public class Weapon : MonoBehaviour
             flashIntensity = Mathf.Clamp(flashIntensity, 0.0f, 1.0f);
         }
 
-        for (int i = 0; i < muzzleFlashLights.Length; i++)
+        /*for (int i = 0; i < muzzleFlashLights.Length; i++)
         {
             muzzleFlashLights[i].intensity = flashIntensity;
+        }*/
+
+        for (int i = 0; i < muzzleFlashSprites.Length; i++)
+        {
+            muzzleFlashSprites[i].color = new Color(muzzleFlashSprites[i].color.r, muzzleFlashSprites[i].color.g, muzzleFlashSprites[i].color.b, flashIntensity);
         }
     }
 

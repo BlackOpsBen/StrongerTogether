@@ -13,9 +13,13 @@ public class MovementAnimation : MonoBehaviour
     private Vector2[] vectors =
     {
         new Vector2(0, 1),
+        new Vector2(0.7f, 0.7f),
         new Vector2(0, -1),
+        new Vector2(0.7f, -0.7f),
         new Vector2(-1, 0),
-        new Vector2(1, 0)
+        new Vector2(-0.7f, -0.7f),
+        new Vector2(1, 0),
+        new Vector2(-0.7f, 0.7f)
     };
 
     private void Start()
