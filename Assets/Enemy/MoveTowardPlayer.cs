@@ -8,15 +8,16 @@ public class MoveTowardPlayer : MonoBehaviour
     [SerializeField] AIPath path;
     [SerializeField] float chaseDistance = 20f;
 
-    private GameObject[] waypoints;
-    private bool headedToWaypoint = false;
-    private Transform targetWaypoint;
-    [SerializeField] float waypointArrivalDist = 2f;
+    //private GameObject[] waypoints;
+    //private bool headedToWaypoint = false;
+    //private Transform targetWaypoint;
+    //[SerializeField] float waypointArrivalDist = 2f;
 
     private void Start()
     {
-        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
-        HeadToRandomWaypoint();
+        //waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        //HeadToRandomWaypoint();
+        HeadToNearbySpot();
     }
 
     private void Update()
@@ -52,9 +53,9 @@ public class MoveTowardPlayer : MonoBehaviour
             }
 
             path.destination = closestPlayer.position;
-            headedToWaypoint = false;
+            //headedToWaypoint = false;
         }
-        else
+        /*else
         {
             if (Vector2.Distance(transform.position, targetWaypoint.position) < waypointArrivalDist)
             {
@@ -64,15 +65,23 @@ public class MoveTowardPlayer : MonoBehaviour
             {
                 HeadToRandomWaypoint();
             }
-        }
+        }*/
     }
 
-    private void HeadToRandomWaypoint()
+    /*private void HeadToRandomWaypoint()
     {
         headedToWaypoint = true;
         int rand = UnityEngine.Random.Range(0, waypoints.Length);
         targetWaypoint = waypoints[rand].transform;
         path.destination = targetWaypoint.position;
+    }*/
+
+    private void HeadToNearbySpot()
+    {
+        float randX = UnityEngine.Random.Range(-3f, 3f);
+        float randY = UnityEngine.Random.Range(-3f, 3f);
+        Vector3 randCoord = new Vector3(randX, randY);
+        path.destination = transform.position - randCoord;
     }
 
     private void OnDrawGizmosSelected()
@@ -80,6 +89,6 @@ public class MoveTowardPlayer : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseDistance);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, waypointArrivalDist);
+        //Gizmos.DrawWireSphere(transform.position, waypointArrivalDist);
     }
 }

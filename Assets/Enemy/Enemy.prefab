@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0c2376930ecd246b520f056ae48f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
+  maxHP: 5
   currentHP: 0
 --- !u!114 &3232149907556252251
 MonoBehaviour:
@@ -195,8 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 6937315396424949940}
-  chaseDistance: 10
-  waypointArrivalDist: 2
+  chaseDistance: 20
 --- !u!114 &4562043996156166410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +233,7 @@ MonoBehaviour:
   - {x: -0.25, y: 0.25, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 545420
+  m_InstanceId: 832112
 --- !u!114 &3644557720961497783
 MonoBehaviour:
   m_ObjectHideFlags: 0
