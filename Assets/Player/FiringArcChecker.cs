@@ -33,7 +33,7 @@ public class FiringArcChecker : MonoBehaviour
     {
         SetArcRotations();
 
-        Vector2 heading = transform.position + transform.right * weapon.GetWeaponTemplate().GetRange();
+        Vector2 heading = transform.position + transform.right * circleCollider.radius;
         Vector2 arc1Heading = transform.position + arcLimit1.right * circleCollider.radius;
         Vector2 arc2Heading = transform.position + arcLimit2.right * circleCollider.radius;
 
@@ -46,10 +46,20 @@ public class FiringArcChecker : MonoBehaviour
             Debug.DrawLine(transform.position, arc1Heading, Color.white);
             Debug.DrawLine(transform.position, arc2Heading, Color.yellow);
         }
-        Vector3[] arcPoints = new Vector3[2];
-        arcPoints[0] = transform.position;
-        arcPoints[1] = heading;
-        drawFiringArc.SetUpLinePoints(arcPoints);
+        Vector3[] rangePoints = new Vector3[2];
+        rangePoints[0] = transform.position;
+        rangePoints[1] = heading;
+        drawFiringArc.SetUpRangeLinePoints(rangePoints);
+
+        Vector3[] arc1Points = new Vector3[2];
+        arc1Points[0] = transform.position;
+        arc1Points[1] = arc1Heading;
+        drawFiringArc.SetUpArc1LinePoints(arc1Points);
+
+        Vector3[] arc2Points = new Vector3[2];
+        arc2Points[0] = transform.position;
+        arc2Points[1] = arc2Heading;
+        drawFiringArc.SetUpArc2LinePoints(arc2Points);
     }
 
     private void OnDrawGizmos()

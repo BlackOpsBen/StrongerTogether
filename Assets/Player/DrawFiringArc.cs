@@ -4,27 +4,54 @@ using UnityEngine;
 
 public class DrawFiringArc : MonoBehaviour
 {
-    private LineRenderer lineRenderer;
-    private Vector3[] points;
+    [SerializeField] LineRenderer rangeLine;
+    [SerializeField] LineRenderer arc1Line;
+    [SerializeField] LineRenderer arc2Line;
+    private Vector3[] rangePoints;
+    private Vector3[] arc1Points;
+    private Vector3[] arc2Points;
 
-    private void Awake()
+    public void SetUpRangeLinePoints(Vector3[] points)
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        rangeLine.positionCount = points.Length;
+        this.rangePoints = points;
     }
 
-    public void SetUpLinePoints(Vector3[] points)
+    public void SetUpArc1LinePoints(Vector3[] points)
     {
-        lineRenderer.positionCount = points.Length;
-        this.points = points;
+        arc1Line.positionCount = points.Length;
+        this.arc1Points = points;
+    }
+
+    public void SetUpArc2LinePoints(Vector3[] points)
+    {
+        arc2Line.positionCount = points.Length;
+        this.arc2Points = points;
     }
 
     private void Update()
     {
-        if (points != null)
+        if (rangePoints != null)
         {
-            for (int i = 0; i < points.Length; i++)
+            for (int i = 0; i < rangePoints.Length; i++)
             {
-                lineRenderer.SetPosition(i, points[i]);
+                rangeLine.SetPosition(i, rangePoints[i]);
+            }
+        }
+
+        if (arc1Points != null)
+        {
+            for (int i = 0; i < arc1Points.Length; i++)
+            {
+                arc1Line.SetPosition(i, arc1Points[i]);
+            }
+        }
+
+        if (arc2Points != null)
+        {
+            for (int i = 0; i < arc2Points.Length; i++)
+            {
+                arc2Line.SetPosition(i, arc2Points[i]);
             }
         }
     }
