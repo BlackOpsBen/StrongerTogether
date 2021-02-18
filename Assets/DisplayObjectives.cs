@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DisplayObjectives : MonoBehaviour
 {
@@ -33,6 +34,15 @@ public class DisplayObjectives : MonoBehaviour
                 else if (textFields[j].name == "Text")
                 {
                     textFields[j].SetText(objectives[i].text);
+                }
+            }
+
+            Image[] checkImages = objectiveListItems[i].GetComponentsInChildren<Image>();
+            for (int j = 0; j < checkImages.Length; j++)
+            {
+                if (checkImages[j].name == "Checkmark")
+                {
+                    checkImages[j].color = Color.clear;
                 }
             }
         }
