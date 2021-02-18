@@ -30,6 +30,8 @@ public class CyclePlayer : MonoBehaviour
         for (int i = 0; i < playerCharacters.Length; i++)
         {
             playerCharacters[i].name = i.ToString();
+
+            playerCharacters[i].GetComponent<DrawSelectionIndicator>().SetColor(i);
         }
 
         playerCharacters[currentPlayer].SetIsActive(true);

@@ -2350,7 +2350,7 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: CharRun
-    clip: {fileID: 8300000, guid: 7d0ce46766e397f4fa6affda3349dd6c, type: 3}
+    clip: {fileID: 8300000, guid: 3442c78ea64bef74ebd4d78030bfac41, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -7651,6 +7651,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137607973762525379, guid: 7657c1013d86a1149af1baebf9e6f355,
+        type: 3}
+      propertyPath: opacticy
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7934804584397437939, guid: 7657c1013d86a1149af1baebf9e6f355,
         type: 3}
