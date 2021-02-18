@@ -5,9 +5,12 @@ using UnityEngine;
 public class Objectives : MonoBehaviour
 {
     [SerializeField] Objective[] objectives;
+    private DisplayObjectives displayObjectives;
 
     private void Start()
     {
+        displayObjectives = GetComponent<DisplayObjectives>();
+
         for (int i = 0; i < objectives.Length; i++)
         {
             objectives[i].Initialize();
@@ -21,6 +24,7 @@ public class Objectives : MonoBehaviour
             if (objectives[i].name == objective.name)
             {
                 objectives[i].Complete();
+                UpdateDisplay(i);
                 return;
             }
         }
@@ -42,5 +46,10 @@ public class Objectives : MonoBehaviour
     public Objective[] GetObjectives()
     {
         return objectives;
+    }
+
+    private void UpdateDisplay(int objectiveIndex)
+    {
+        displayObjectives.MarkComplete(objectiveIndex);
     }
 }

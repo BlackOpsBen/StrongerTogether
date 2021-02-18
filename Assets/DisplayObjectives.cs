@@ -47,4 +47,13 @@ public class DisplayObjectives : MonoBehaviour
             }
         }
     }
+
+    public void MarkComplete(int index)
+    {
+        Image[] checkImages = objectiveListItems[index].GetComponentsInChildren<Image>();
+        for (int i = 0; i < checkImages.Length; i++)
+        {
+            checkImages[i].color = Color.white;
+        }
+    }
 }
