@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3967526698862579292}
   - component: {fileID: 5138202457287026569}
   m_Layer: 0
-  m_Name: Signal
+  m_Name: Objective
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299c233131f8b5c46b328fd01d2690a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completesObjective: {fileID: 11400000, guid: 08f32bfbbf8275a459f56b14d250e489, type: 2}
+  completesObjective: {fileID: 0}
 --- !u!114 &143453541981185108
 MonoBehaviour:
   m_ObjectHideFlags: 0

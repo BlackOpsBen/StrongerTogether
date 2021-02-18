@@ -266,8 +266,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -852134503
-  m_SortingLayer: 5
+  m_SortingLayerID: -1322482823
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -564187341237072398, guid: 993c2335ceb4fca439270d2e98e4aa01,
     type: 3}
@@ -296,6 +296,8 @@ MonoBehaviour:
   thisCollider: {fileID: 9066931664148711754}
   thatCollider: {fileID: 9066931664804291924}
   startDisabled: 0
+  disabledState: {fileID: 0}
+  enabledState: {fileID: 0}
 --- !u!114 &9066931664148711765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,8 +440,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -852134503
-  m_SortingLayer: 5
+  m_SortingLayerID: -1322482823
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5000442432590359294, guid: f1d2611f8e8404b4dbc1205928a4d935,
     type: 3}
@@ -494,6 +496,8 @@ MonoBehaviour:
   thisCollider: {fileID: 9066931664804291924}
   thatCollider: {fileID: 9066931664148711754}
   startDisabled: 1
+  disabledState: {fileID: 0}
+  enabledState: {fileID: 0}
 --- !u!114 &9066931664804291920
 MonoBehaviour:
   m_ObjectHideFlags: 0

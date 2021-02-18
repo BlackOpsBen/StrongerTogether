@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SendSignal : MonoBehaviour, IInteract
+public class CompletesObjective : MonoBehaviour, IInteract
 {
     [SerializeField] Objective completesObjective;
     private InteractionTimer timer;
