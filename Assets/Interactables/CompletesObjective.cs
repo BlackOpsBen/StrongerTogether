@@ -7,6 +7,8 @@ public class CompletesObjective : MonoBehaviour, IInteract
     [SerializeField] Objective completesObjective;
     private InteractionTimer timer;
 
+    [SerializeField] string interactionSoundName;
+
     private void Start()
     {
         timer = GetComponent<InteractionTimer>();
@@ -22,6 +24,9 @@ public class CompletesObjective : MonoBehaviour, IInteract
                 if (timer.GetProgress() < 1.0f)
                 {
                     timer.MakeProgress(speedMultiplier);
+
+                    AudioManager.Instance.PlaySFXLoop(interactionSoundName);
+
                     return;
                 }
                 else
@@ -39,6 +44,8 @@ public class CompletesObjective : MonoBehaviour, IInteract
 
     private void CompleteInteraction()
     {
+        AudioManager.Instance.StopSFXLoop(interactionSoundName);
+
         GameManager.Instance.GetObjectives().CompleteObjective(completesObjective);
         timer.ResetProgress();
     }

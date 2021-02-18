@@ -719,7 +719,7 @@ Transform:
   - {fileID: 889209978}
   - {fileID: 570079621}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &298155145
 PrefabInstance:
@@ -2280,7 +2280,7 @@ Transform:
   - {fileID: 1307977331}
   - {fileID: 1791605719}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &803898090
 GameObject:
@@ -2326,6 +2326,26 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Machine Gun
     clip: {fileID: 8300000, guid: 57050ef3dcf1da444a92ba4795f0e55a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Typing
+    clip: {fileID: 8300000, guid: 7d0ce46766e397f4fa6affda3349dd6c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Fixing
+    clip: {fileID: 8300000, guid: 7d0ce46766e397f4fa6affda3349dd6c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Pressing
+    clip: {fileID: 8300000, guid: 7d0ce46766e397f4fa6affda3349dd6c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Door
+    clip: {fileID: 8300000, guid: 480d88cba3ffd7e4aad0a99169bf91b0, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -2462,7 +2482,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &803898093
 MonoBehaviour:
@@ -3040,7 +3060,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1015065693
 PrefabInstance:
@@ -4519,7 +4539,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1550267679
 PrefabInstance:
@@ -4599,6 +4619,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f3281ddee137c1d489c52c62b224138d,
         type: 2}
+    - target: {fileID: 143453541981185110, guid: f898843d2277a174c8848cbf460f54fa,
+        type: 3}
+      propertyPath: interactionSoundName
+      value: Typing
+      objectReference: {fileID: 0}
     - target: {fileID: 143453541981185111, guid: f898843d2277a174c8848cbf460f54fa,
         type: 3}
       propertyPath: m_Sprite
@@ -5154,6 +5179,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 08f32bfbbf8275a459f56b14d250e489,
         type: 2}
+    - target: {fileID: 143453541981185110, guid: f898843d2277a174c8848cbf460f54fa,
+        type: 3}
+      propertyPath: interactionSoundName
+      value: Typing
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f898843d2277a174c8848cbf460f54fa, type: 3}
 --- !u!4 &1636147735 stripped
@@ -6840,6 +6870,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8839696f771420b4cab2c5a9d7e45ea7,
         type: 2}
+    - target: {fileID: 143453541981185110, guid: f898843d2277a174c8848cbf460f54fa,
+        type: 3}
+      propertyPath: interactionSoundName
+      value: Fixing
+      objectReference: {fileID: 0}
     - target: {fileID: 143453541981185111, guid: f898843d2277a174c8848cbf460f54fa,
         type: 3}
       propertyPath: m_Sprite

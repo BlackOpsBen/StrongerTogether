@@ -300,6 +300,8 @@ MonoBehaviour:
     type: 3}
   enabledState: {fileID: -564187341237072398, guid: 993c2335ceb4fca439270d2e98e4aa01,
     type: 3}
+  interactionSoundName: Pressing
+  openCloseSoundName: Door
 --- !u!114 &9066931664148711765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +504,8 @@ MonoBehaviour:
     type: 3}
   enabledState: {fileID: 5000442432590359294, guid: f1d2611f8e8404b4dbc1205928a4d935,
     type: 3}
+  interactionSoundName: Pressing
+  openCloseSoundName: Door
 --- !u!114 &9066931664804291920
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,9 @@ public class OpenClose : MonoBehaviour, IInteract
     private InteractionTimer timer;
     private bool isTimed = false;
 
+    [SerializeField] string interactionSoundName;
+    [SerializeField] string openCloseSoundName;
+
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -42,6 +45,9 @@ public class OpenClose : MonoBehaviour, IInteract
             if (timer.GetProgress() < 1.0f)
             {
                 timer.MakeProgress(speedMultiplier);
+
+                AudioManager.Instance.PlaySFXLoop(interactionSoundName);
+
                 return;
             }
             else
@@ -57,6 +63,9 @@ public class OpenClose : MonoBehaviour, IInteract
 
     private void CompleteInteraction()
     {
+        AudioManager.Instance.StopSFXLoop(interactionSoundName);
+        AudioManager.Instance.PlaySFX(openCloseSoundName);
+
         thisCollider.enabled = !thisCollider.enabled;
         thatCollider.enabled = !thisCollider.enabled;
         ToggleSprite();

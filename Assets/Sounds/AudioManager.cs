@@ -93,7 +93,10 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(SFX, sound => sound.name == name);
         s.source.loop = true;
-        s.source.Play();
+        if (!s.source.isPlaying)
+        {
+            s.source.Play();
+        }
     }
 
     public void StopSFXLoop(string name)
