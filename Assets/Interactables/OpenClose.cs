@@ -85,4 +85,9 @@ public class OpenClose : MonoBehaviour, IInteract
             sr.sprite = disabledState;
         }
     }
+
+    public void EndInteract()
+    {
+        AudioManager.Instance.StopSFXLoop(interactionSoundName);
+    }
 }

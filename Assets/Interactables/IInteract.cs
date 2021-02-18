@@ -5,4 +5,6 @@ using UnityEngine;
 public interface IInteract
 {
     void Interact(float speedMultiplier);
+
+    void EndInteract();
 }

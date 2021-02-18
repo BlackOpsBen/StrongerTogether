@@ -15,4 +15,13 @@ public class Interact : MonoBehaviour
             interactable.Interact(interactionMultiplier);
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        IInteract interactable = collision.gameObject.GetComponent<IInteract>();
+        if (interactable != null)
+        {
+            Debug.Log(transform.parent.name + " is done with " + collision.name);
+            interactable.EndInteract();
+        }
+    }
 }
