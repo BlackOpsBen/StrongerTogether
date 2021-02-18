@@ -59,6 +59,11 @@ public class Movement : MonoBehaviour
         isActive = value;
     }
 
+    public bool GetIsActive()
+    {
+        return isActive;
+    }
+
     public bool GetIsMoving()
     {
         if (isActive && movement.magnitude > float.Epsilon)
