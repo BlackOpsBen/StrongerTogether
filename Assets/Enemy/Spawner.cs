@@ -20,11 +20,11 @@ public class Spawner : MonoBehaviour
 
     private float spawnIntensity = 1f;
 
-    public bool validSpawn = true;
+    private bool isValidSpawn = false;
 
     private void Update()
     {
-        if (validSpawn)
+        if (isValidSpawn)
         {
             spawnCountdown -= Time.deltaTime;
             if (spawnCountdown < float.Epsilon)
@@ -77,5 +77,10 @@ public class Spawner : MonoBehaviour
     private GameObject InstantiateNewEnemy()
     {
         return Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform);
+    }
+
+    public void SetIsValidSpawn(bool value)
+    {
+        isValidSpawn = value;
     }
 }

@@ -108,7 +108,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayDialog(int playerIndex, int DIALOG_CATEGORY, bool oneAtATime)
     {
-        int selectedOption = 0; // TODO randomize selectedOption
+        int maxOption = characterSoundGroups[playerIndex].dialogCategories[DIALOG_CATEGORY].dialogsOptions.Length;
+        int selectedOption = UnityEngine.Random.Range(0, maxOption);
         Sound s = characterSoundGroups[playerIndex].dialogCategories[DIALOG_CATEGORY].dialogsOptions[selectedOption];
 
         if (oneAtATime)

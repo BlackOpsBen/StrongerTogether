@@ -15,7 +15,7 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < spawners.Length; i++)
         {
-            spawners[i].validSpawn = CheckIfOffScreen(spawners[i].transform.position);
+            spawners[i].SetIsValidSpawn(CheckIfOffScreen(spawners[i].transform.position));
         }
     }
 
