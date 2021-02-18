@@ -6,15 +6,11 @@ public class AssignColors : MonoBehaviour
 {
     [SerializeField] RuntimeAnimatorController[] animatorControllers;
 
-    private CyclePlayer cycler;
-
-    private void Start()
+    public void AssignColorAnimator(Animator[] animators)
     {
-        cycler = FindObjectOfType<CyclePlayer>();
-
-        for (int i = 0; i < animatorControllers.Length; i++)
+        for (int i = 0; i < animators.Length; i++)
         {
-            cycler.GetPlayerAnimator(i).runtimeAnimatorController = animatorControllers[i];
+            animators[i].runtimeAnimatorController = animatorControllers[i];
         }
     }
 }

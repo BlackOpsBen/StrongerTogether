@@ -4755,9 +4755,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorControllers:
+  - {fileID: 9100000, guid: c4848926068a1854f90465b2c015b842, type: 2}
   - {fileID: 9100000, guid: ff716adae1c39104bbaa83978b115320, type: 2}
   - {fileID: 9100000, guid: e9faf91ae325ff94bbc141b775fd0e49, type: 2}
-  - {fileID: 9100000, guid: c4848926068a1854f90465b2c015b842, type: 2}
   - {fileID: 9100000, guid: 4cd2a94ce7c7a5e41b98cb8afea496d0, type: 2}
 --- !u!1 &1681851469 stripped
 GameObject:
@@ -6327,12 +6327,12 @@ PrefabInstance:
     - target: {fileID: 341397897251918931, guid: 0a0fed4e99070b7418be26b87a74feb2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.11
+      value: -25.2
       objectReference: {fileID: 0}
     - target: {fileID: 341397897251918931, guid: 0a0fed4e99070b7418be26b87a74feb2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.46
+      value: -12.19
       objectReference: {fileID: 0}
     - target: {fileID: 341397897251918931, guid: 0a0fed4e99070b7418be26b87a74feb2,
         type: 3}

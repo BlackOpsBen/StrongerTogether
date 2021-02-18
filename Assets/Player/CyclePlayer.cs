@@ -10,6 +10,8 @@ public class CyclePlayer : MonoBehaviour
 
     private int currentPlayer = 0;
 
+    private AssignColors assignColors;
+
     private void Awake()
     {
         controls = new PlayerControls();
@@ -31,6 +33,14 @@ public class CyclePlayer : MonoBehaviour
         }
 
         playerCharacters[currentPlayer].SetIsActive(true);
+
+        assignColors = GetComponent<AssignColors>();
+        Animator[] animators = new Animator[playerCharacters.Length];
+        for (int i = 0; i < animators.Length; i++)
+        {
+            animators[i] = playerCharacters[i].GetComponentInChildren<Animator>();
+        }
+        assignColors.AssignColorAnimator(animators);
     }
 
     public void SelectNext()
@@ -94,10 +104,5 @@ public class CyclePlayer : MonoBehaviour
     private void PlaySelectedDialog()
     {
         AudioManager.Instance.PlayDialog(currentPlayer, AudioManager.DIALOG_SELECTED, false);
-    }
-
-    public Animator GetPlayerAnimator(int playerIndex)
-    {
-        return playerCharacters[playerIndex].GetComponent<Animator>();
     }
 }
