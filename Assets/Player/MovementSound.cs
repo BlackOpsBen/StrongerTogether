@@ -15,12 +15,10 @@ public class MovementSound : MonoBehaviour
     {
         if (movement.GetIsMoving())
         {
-            Debug.Log("Is Moving");
             AudioManager.Instance.PlaySFXLoop(runSound);
         }
         else if (movement.GetIsActive())
         {
-            Debug.Log("Stopped Moving");
             AudioManager.Instance.StopSFXLoop(runSound);
         }
     }

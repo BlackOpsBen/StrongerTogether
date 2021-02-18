@@ -20,21 +20,26 @@ public class Spawner : MonoBehaviour
 
     private float spawnIntensity = 1f;
 
+    public bool validSpawn = true;
+
     private void Update()
     {
-        spawnCountdown -= Time.deltaTime;
-        if (spawnCountdown < float.Epsilon)
+        if (validSpawn)
         {
-            Spawn();
-            ResetCountdown();
-        }
-
-        for (int i = 0; i < livingPool.Count; i++)
-        {
-            if (!livingPool[i].activeSelf)
+            spawnCountdown -= Time.deltaTime;
+            if (spawnCountdown < float.Epsilon)
             {
-                waitingPool.Add(livingPool[i]);
-                livingPool.RemoveAt(i);
+                Spawn();
+                ResetCountdown();
+            }
+
+            for (int i = 0; i < livingPool.Count; i++)
+            {
+                if (!livingPool[i].activeSelf)
+                {
+                    waitingPool.Add(livingPool[i]);
+                    livingPool.RemoveAt(i);
+                }
             }
         }
     }

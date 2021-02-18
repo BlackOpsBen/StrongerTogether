@@ -84,7 +84,7 @@ public class TargetEnemies : MonoBehaviour
         foreach (Transform target in arcTargets)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position - transform.position, firingArcChecker.circleCollider.radius);
-            if (!hit.collider.CompareTag("Target"))
+            if (hit.collider != null && !hit.collider.CompareTag("Target"))
             {
                 toRemove.Add(target);
             }
