@@ -95,4 +95,9 @@ public class CyclePlayer : MonoBehaviour
     {
         AudioManager.Instance.PlayDialog(currentPlayer, AudioManager.DIALOG_SELECTED, false);
     }
+
+    public Animator GetPlayerAnimator(int playerIndex)
+    {
+        return playerCharacters[playerIndex].GetComponent<Animator>();
+    }
 }
