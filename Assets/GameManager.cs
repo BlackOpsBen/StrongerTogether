@@ -30,4 +30,9 @@ public class GameManager : MonoBehaviour
     {
         return objectives;
     }
+
+    public void EndGame(bool win)
+    {
+        Debug.Log("MISSION ACCOMPLISHED!");
+    }
 }

@@ -14,25 +14,49 @@ public class CompletesObjective : MonoBehaviour, IInteract
 
     public void Interact(float speedMultiplier)
     {
-        bool alreadyComplete = GameManager.Instance.GetObjectives().GetObjective(completesObjective).GetIsComplete();
-        Debug.Log("already complete? " + alreadyComplete.ToString());
-        if (!alreadyComplete)
+        if (CheckPrereqsComplete())
         {
-            if (timer.GetProgress() < 1.0f)
+            bool alreadyComplete = GameManager.Instance.GetObjectives().GetObjective(completesObjective).GetIsComplete();
+            if (!alreadyComplete)
             {
-                timer.MakeProgress(speedMultiplier);
-                return;
-            }
-            else
-            {
-                CompleteInteraction();
+                if (timer.GetProgress() < 1.0f)
+                {
+                    timer.MakeProgress(speedMultiplier);
+                    return;
+                }
+                else
+                {
+                    CompleteInteraction();
+                }
             }
         }
+        else
+        {
+            DisplayReminder();
+        }
+        
     }
 
     private void CompleteInteraction()
     {
         GameManager.Instance.GetObjectives().CompleteObjective(completesObjective);
         timer.ResetProgress();
+    }
+
+    private bool CheckPrereqsComplete()
+    {
+        for (int i = 0; i < completesObjective.prereqObjectives.Length; i++)
+        {
+            if (!GameManager.Instance.GetObjectives().GetObjectives()[i].GetIsComplete())
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void DisplayReminder()
+    {
+        Debug.LogWarning("Must complete other objectives first");
     }
 }

@@ -7,6 +7,7 @@ public class Objective : ScriptableObject
 {
     public string text;
     private bool isComplete = false;
+    public Objective[] prereqObjectives;
 
     public void Complete()
     {

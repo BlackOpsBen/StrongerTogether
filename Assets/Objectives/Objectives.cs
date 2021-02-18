@@ -6,6 +6,7 @@ public class Objectives : MonoBehaviour
 {
     [SerializeField] Objective[] objectives;
     private DisplayObjectives displayObjectives;
+    private int completedObjectives = 0;
 
     private void Start()
     {
@@ -25,6 +26,8 @@ public class Objectives : MonoBehaviour
             {
                 objectives[i].Complete();
                 UpdateDisplay(i);
+                completedObjectives++;
+                CheckForVictory();
                 return;
             }
         }
@@ -51,5 +54,13 @@ public class Objectives : MonoBehaviour
     private void UpdateDisplay(int objectiveIndex)
     {
         displayObjectives.MarkComplete(objectiveIndex);
+    }
+
+    private void CheckForVictory()
+    {
+        if (completedObjectives == objectives.Length)
+        {
+            GameManager.Instance.EndGame(true);
+        }
     }
 }
