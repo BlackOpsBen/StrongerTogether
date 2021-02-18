@@ -10,13 +10,16 @@ public class Objective : ScriptableObject
 
     public void Complete()
     {
-        Debug.LogWarning("Objective being marked Complete");
         isComplete = true;
     }
 
     public bool GetIsComplete()
     {
-        Debug.Log("GetIsComplete called. Returning: " + isComplete.ToString());
         return isComplete;
+    }
+
+    public void Initialize()
+    {
+        isComplete = false;
     }
 }

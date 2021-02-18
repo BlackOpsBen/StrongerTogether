@@ -6,6 +6,14 @@ public class Objectives : MonoBehaviour
 {
     [SerializeField] Objective[] objectives;
 
+    private void Start()
+    {
+        for (int i = 0; i < objectives.Length; i++)
+        {
+            objectives[i].Initialize();
+        }
+    }
+
     public void CompleteObjective(Objective objective)
     {
         for (int i = 0; i < objectives.Length; i++)
@@ -29,5 +37,10 @@ public class Objectives : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public Objective[] GetObjectives()
+    {
+        return objectives;
     }
 }

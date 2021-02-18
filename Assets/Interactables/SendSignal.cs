@@ -14,7 +14,7 @@ public class SendSignal : MonoBehaviour, IInteract
 
     public void Interact(float speedMultiplier)
     {
-        bool alreadyComplete = GameManager.Instance.objectives.GetObjective(completesObjective).GetIsComplete();
+        bool alreadyComplete = GameManager.Instance.GetObjectives().GetObjective(completesObjective).GetIsComplete();
         Debug.Log("already complete? " + alreadyComplete.ToString());
         if (!alreadyComplete)
         {
@@ -32,7 +32,7 @@ public class SendSignal : MonoBehaviour, IInteract
 
     private void CompleteInteraction()
     {
-        GameManager.Instance.objectives.CompleteObjective(completesObjective);
+        GameManager.Instance.GetObjectives().CompleteObjective(completesObjective);
         timer.ResetProgress();
     }
 }

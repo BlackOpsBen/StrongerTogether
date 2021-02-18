@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public Objectives objectives;
+    private Objectives objectives;
 
     private void Awake()
     {
@@ -24,5 +24,10 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    public Objectives GetObjectives()
+    {
+        return objectives;
     }
 }
