@@ -2360,28 +2360,118 @@ MonoBehaviour:
     - name: Selected
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        clip: {fileID: 8300000, guid: eece46eb9d8ed434a83a75d1963606ab, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 1a3fa774ee958d6409e72f654dc6a746, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: a333446c0282452409ba4e2b01805ff1, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 7ea413ce0ba2989428fb3802cb08b930, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 4f49c495ee39a9346ab58a1d0dda1573, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Kill
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        clip: {fileID: 8300000, guid: 660a2aadeb423a8469866a4dd9d36edc, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 70046b1ed2968d64b91e03525918f69e, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: d3f713ea5237deb4db2491feb0578c0c, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: dc56d67d282cf984497a1a3ce8623abb, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 5371b27e7b7790447b4d13d47d84c719, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Hurt
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        clip: {fileID: 8300000, guid: add91eb9e37b47945b3bc9e79ac2796f, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 2f1d53a8f4ffee24abeb76bbdb4c2349, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: f480b7850d9b2454bb5d0f45a31cdd2b, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 29ff811e9ec36574594e627153bf725a, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: aec129fea29fa924f8774014551c1477, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 5
+        clip: {fileID: 8300000, guid: c03b1525d587a604cb95707e7b39b8e6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 6
+        clip: {fileID: 8300000, guid: 925787b2091e2b14b94c9e42a669cc02, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 7
+        clip: {fileID: 8300000, guid: a5d77caad537c72429b5e7c1c84c477a, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Dead
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        clip: {fileID: 8300000, guid: 57ff41772c39f4040a2985c109ba957d, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: a3e66bb4f29cfbc4c83574b82e4cf536, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: 49691518230c3eb43b07cb1f3c6f4ff6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 83ac7752a84bf9f4d8de2af306fda5ec, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
@@ -2390,28 +2480,118 @@ MonoBehaviour:
     - name: Selected
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        clip: {fileID: 8300000, guid: eece46eb9d8ed434a83a75d1963606ab, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 1a3fa774ee958d6409e72f654dc6a746, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: a333446c0282452409ba4e2b01805ff1, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 7ea413ce0ba2989428fb3802cb08b930, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 4f49c495ee39a9346ab58a1d0dda1573, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Kill
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        clip: {fileID: 8300000, guid: 660a2aadeb423a8469866a4dd9d36edc, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 70046b1ed2968d64b91e03525918f69e, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: d3f713ea5237deb4db2491feb0578c0c, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: dc56d67d282cf984497a1a3ce8623abb, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 5371b27e7b7790447b4d13d47d84c719, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Hurt
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        clip: {fileID: 8300000, guid: add91eb9e37b47945b3bc9e79ac2796f, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 2f1d53a8f4ffee24abeb76bbdb4c2349, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: f480b7850d9b2454bb5d0f45a31cdd2b, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 29ff811e9ec36574594e627153bf725a, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: aec129fea29fa924f8774014551c1477, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 5
+        clip: {fileID: 8300000, guid: c03b1525d587a604cb95707e7b39b8e6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 6
+        clip: {fileID: 8300000, guid: 925787b2091e2b14b94c9e42a669cc02, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 7
+        clip: {fileID: 8300000, guid: a5d77caad537c72429b5e7c1c84c477a, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Dead
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        clip: {fileID: 8300000, guid: 57ff41772c39f4040a2985c109ba957d, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: a3e66bb4f29cfbc4c83574b82e4cf536, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: 49691518230c3eb43b07cb1f3c6f4ff6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 83ac7752a84bf9f4d8de2af306fda5ec, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
@@ -2420,28 +2600,118 @@ MonoBehaviour:
     - name: Selected
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        clip: {fileID: 8300000, guid: eece46eb9d8ed434a83a75d1963606ab, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 1a3fa774ee958d6409e72f654dc6a746, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: a333446c0282452409ba4e2b01805ff1, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 7ea413ce0ba2989428fb3802cb08b930, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 4f49c495ee39a9346ab58a1d0dda1573, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Kill
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        clip: {fileID: 8300000, guid: 660a2aadeb423a8469866a4dd9d36edc, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 70046b1ed2968d64b91e03525918f69e, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: d3f713ea5237deb4db2491feb0578c0c, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: dc56d67d282cf984497a1a3ce8623abb, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 5371b27e7b7790447b4d13d47d84c719, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Hurt
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        clip: {fileID: 8300000, guid: add91eb9e37b47945b3bc9e79ac2796f, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 2f1d53a8f4ffee24abeb76bbdb4c2349, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: f480b7850d9b2454bb5d0f45a31cdd2b, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 29ff811e9ec36574594e627153bf725a, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: aec129fea29fa924f8774014551c1477, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 5
+        clip: {fileID: 8300000, guid: c03b1525d587a604cb95707e7b39b8e6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 6
+        clip: {fileID: 8300000, guid: 925787b2091e2b14b94c9e42a669cc02, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 7
+        clip: {fileID: 8300000, guid: a5d77caad537c72429b5e7c1c84c477a, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Dead
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        clip: {fileID: 8300000, guid: 57ff41772c39f4040a2985c109ba957d, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: a3e66bb4f29cfbc4c83574b82e4cf536, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: 49691518230c3eb43b07cb1f3c6f4ff6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 83ac7752a84bf9f4d8de2af306fda5ec, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
@@ -2450,28 +2720,118 @@ MonoBehaviour:
     - name: Selected
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 2b2483970c49cdc42affa3f378f25216, type: 3}
+        clip: {fileID: 8300000, guid: eece46eb9d8ed434a83a75d1963606ab, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 1a3fa774ee958d6409e72f654dc6a746, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: a333446c0282452409ba4e2b01805ff1, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 7ea413ce0ba2989428fb3802cb08b930, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 4f49c495ee39a9346ab58a1d0dda1573, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Kill
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: b3599c34e79d7b745b581b79b0e6620e, type: 3}
+        clip: {fileID: 8300000, guid: 660a2aadeb423a8469866a4dd9d36edc, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 70046b1ed2968d64b91e03525918f69e, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: d3f713ea5237deb4db2491feb0578c0c, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: dc56d67d282cf984497a1a3ce8623abb, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: 5371b27e7b7790447b4d13d47d84c719, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Hurt
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: 27031a0942289864e9904fcb7f187257, type: 3}
+        clip: {fileID: 8300000, guid: add91eb9e37b47945b3bc9e79ac2796f, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 2f1d53a8f4ffee24abeb76bbdb4c2349, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: f480b7850d9b2454bb5d0f45a31cdd2b, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 29ff811e9ec36574594e627153bf725a, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 4
+        clip: {fileID: 8300000, guid: aec129fea29fa924f8774014551c1477, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 5
+        clip: {fileID: 8300000, guid: c03b1525d587a604cb95707e7b39b8e6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 6
+        clip: {fileID: 8300000, guid: 925787b2091e2b14b94c9e42a669cc02, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 7
+        clip: {fileID: 8300000, guid: a5d77caad537c72429b5e7c1c84c477a, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
     - name: Dead
       dialogsOptions:
       - name: 0
-        clip: {fileID: 8300000, guid: c4d91c367c2d2fb40b94196a20d461db, type: 3}
+        clip: {fileID: 8300000, guid: 57ff41772c39f4040a2985c109ba957d, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: a3e66bb4f29cfbc4c83574b82e4cf536, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: 49691518230c3eb43b07cb1f3c6f4ff6, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: 83ac7752a84bf9f4d8de2af306fda5ec, type: 3}
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
@@ -5386,6 +5746,7 @@ GameObject:
   - component: {fileID: 1657904032}
   - component: {fileID: 1657904033}
   - component: {fileID: 1657904034}
+  - component: {fileID: 1657904035}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5482,6 +5843,18 @@ MonoBehaviour:
   objectiveParent: {fileID: 702966287}
   initialOffset: 50
   offset: 50
+--- !u!114 &1657904035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657904028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd03c75ab83043941b8e5be51943ce0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681851469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1556263486258747598, guid: f8362ef2eabec7f4d9db48c517cc44aa,
