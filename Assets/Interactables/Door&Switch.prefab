@@ -105,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9066931663872267182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.07, y: -11.54, z: -0.28955078}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9066931664148711764}
@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9066931664148711761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0699997, y: 0.03999996, z: 0.28955078}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 9066931663010774561}
@@ -296,8 +296,10 @@ MonoBehaviour:
   thisCollider: {fileID: 9066931664148711754}
   thatCollider: {fileID: 9066931664804291924}
   startDisabled: 0
-  disabledState: {fileID: 0}
-  enabledState: {fileID: 0}
+  disabledState: {fileID: -3526119571052431214, guid: 993c2335ceb4fca439270d2e98e4aa01,
+    type: 3}
+  enabledState: {fileID: -564187341237072398, guid: 993c2335ceb4fca439270d2e98e4aa01,
+    type: 3}
 --- !u!114 &9066931664148711765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +362,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 0.6666667, y: 0.6666667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -397,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9066931664804291923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0440006, y: 0.029999733, z: 0.28955078}
+  m_LocalPosition: {x: -1.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9066931664068131680}
@@ -496,8 +498,10 @@ MonoBehaviour:
   thisCollider: {fileID: 9066931664804291924}
   thatCollider: {fileID: 9066931664148711754}
   startDisabled: 1
-  disabledState: {fileID: 0}
-  enabledState: {fileID: 0}
+  disabledState: {fileID: 5040949340825292554, guid: f1d2611f8e8404b4dbc1205928a4d935,
+    type: 3}
+  enabledState: {fileID: 5000442432590359294, guid: f1d2611f8e8404b4dbc1205928a4d935,
+    type: 3}
 --- !u!114 &9066931664804291920
 MonoBehaviour:
   m_ObjectHideFlags: 0
