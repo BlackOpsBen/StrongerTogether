@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     private void Win()
     {
+        AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySFX("Win");
     }
 
