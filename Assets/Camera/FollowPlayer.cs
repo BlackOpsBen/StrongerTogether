@@ -53,6 +53,7 @@ public class FollowPlayer : MonoBehaviour
         for (int i = 0; i < targets.Count; i++)
         {
             bounds.Encapsulate(targets[i].position);
+            bounds.Encapsulate(targets[i].GetComponent<CameraSecondaryTarget>().GetSecondaryTarget().position);
         }
 
         return bounds;
