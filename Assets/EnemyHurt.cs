@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnemyHurt : MonoBehaviour, IHurt
 {
+    [SerializeField] ParticleSystem hitPFX;
+
     public void TriggerHurtBehavior()
     {
-        // TODO enemy hurt sound
+        hitPFX.Play();
     }
 }
