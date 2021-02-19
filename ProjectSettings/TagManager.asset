@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Target
   - Waypoint
+  - HitPFXParent
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     private Spawner[] spawners;
 
+    [SerializeField] bool spawn = true;
+
     private void Start()
     {
         spawners = FindObjectsOfType<Spawner>();
@@ -21,7 +23,14 @@ public class SpawnManager : MonoBehaviour
 
     private bool CheckIfOffScreen(Vector3 pos)
     {
-        Vector2 screenPos = Camera.main.WorldToViewportPoint(pos);
-        return (screenPos.x < 0 || screenPos.x > 1 || screenPos.y < 0 || screenPos.y > 1);
+        if (spawn)
+        {
+            Vector2 screenPos = Camera.main.WorldToViewportPoint(pos);
+            return (screenPos.x < 0 || screenPos.x > 1 || screenPos.y < 0 || screenPos.y > 1);
+        }
+        else
+        {
+            return false;
+        }
     }
 }
