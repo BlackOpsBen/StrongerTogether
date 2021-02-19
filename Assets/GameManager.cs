@@ -33,6 +33,24 @@ public class GameManager : MonoBehaviour
 
     public void EndGame(bool win)
     {
-        Debug.Log("MISSION ACCOMPLISHED!");
+        if (win)
+        {
+            Win();
+        }
+        else
+        {
+            Lose();
+        }
+    }
+
+    private void Win()
+    {
+        AudioManager.Instance.PlaySFX("Win");
+    }
+
+    private void Lose()
+    {
+        AudioManager.Instance.StopMusic();
+        AudioManager.Instance.PlaySFX("Lose");
     }
 }

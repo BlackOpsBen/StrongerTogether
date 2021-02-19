@@ -21,6 +21,7 @@ public class PlayerDeath : MonoBehaviour, IDie
         DisableColliders();
         SelectNextPlayer();
         AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_DEAD, false);
+        GameManager.Instance.GetComponent<TrackLivingPlayers>().ReduceLivingPlayers();
     }
 
     private void DisableObjects()

@@ -18,6 +18,9 @@ public class AudioManager : MonoBehaviour
     [Header("Characters")]
     public SoundGroup[] characterSoundGroups;
 
+    [Header("Music")]
+    [SerializeField] AudioSource musicAudioSource;
+
     private bool someoneIsSpeaking = false;
     private float speakingDuration = 0f;
 
@@ -104,6 +107,11 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(SFX, sound => sound.name == name);
         s.source.loop = false;
         s.source.Stop();
+    }
+
+    public void StopMusic()
+    {
+        musicAudioSource.Stop();
     }
 
     public void PlayDialog(int playerIndex, int DIALOG_CATEGORY, bool oneAtATime)
