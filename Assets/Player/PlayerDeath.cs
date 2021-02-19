@@ -6,8 +6,6 @@ public class PlayerDeath : MonoBehaviour, IDie
 {
     [SerializeField] GameObject[] objectsToDisableOnDeath;
 
-    [Header("Which player is this?")]
-
     private CircleCollider2D circleCollider;
 
     private void Start()
@@ -19,7 +17,10 @@ public class PlayerDeath : MonoBehaviour, IDie
     {
         DisableObjects();
         DisableColliders();
-        SelectNextPlayer();
+        if (GetComponent<Movement>().GetIsActive())
+        {
+            SelectNextPlayer();
+        }
         AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_DEAD, false);
         GameManager.Instance.GetComponent<TrackLivingPlayers>().ReduceLivingPlayers();
     }

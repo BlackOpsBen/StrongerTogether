@@ -45,13 +45,21 @@ public class GameManager : MonoBehaviour
 
     private void Win()
     {
+        Escape[] playersEscapes = FindObjectsOfType<Escape>();
+        for (int i = 0; i < playersEscapes.Length; i++)
+        {
+            playersEscapes[i].DoEscape();
+        }
+        GetComponent<CyclePlayer>().enabled = false;
         AudioManager.Instance.StopMusic();
+        AudioManager.Instance.StopSFXLoop("CharRun");
         AudioManager.Instance.PlaySFX("Win");
     }
 
     private void Lose()
     {
         AudioManager.Instance.StopMusic();
+        AudioManager.Instance.StopSFXLoop("CharRun");
         AudioManager.Instance.PlaySFX("Lose");
     }
 }
