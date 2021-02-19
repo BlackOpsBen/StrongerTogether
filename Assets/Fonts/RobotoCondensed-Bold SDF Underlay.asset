@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: RobotoCondensed-Bold SDF
+  m_Name: RobotoCondensed-Bold SDF Underlay
   m_EditorClassIdentifier: 
-  hashCode: -1509993491
+  hashCode: 836542801
   material: {fileID: 6831346234235489924}
-  materialHashCode: -2114748371
+  materialHashCode: 486359249
   m_Version: 1.1.0
   m_SourceFontFileGUID: 72ff48b09a43b9d41959278666c61fcc
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 72ff48b09a43b9d41959278666c61fcc,
@@ -2615,7 +2615,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: RobotoCondensed-Bold SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: UNDERLAY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
