@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] WeaponTemplate equippedWeapon;
     [SerializeField] Light2D[] muzzleFlashLights;
     [SerializeField] SpriteRenderer[] muzzleFlashSprites;
+    [SerializeField] DrawBulletTrail bulletTrail;
 
     private float flashIntensity = 0.0f;
     private float flashSpeed = 10f;
@@ -37,6 +38,7 @@ public class Weapon : MonoBehaviour
         if (weaponTimer.GetIsReady())
         {
             FireShot(target);
+            bulletTrail.Draw(target.position);
             weaponTimer.Reset();
         }
     }

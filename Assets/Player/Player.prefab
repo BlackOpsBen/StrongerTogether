@@ -600,6 +600,7 @@ MonoBehaviour:
   muzzleFlashSprites:
   - {fileID: 6427490053249228136}
   - {fileID: 5419873795431608879}
+  bulletTrail: {fileID: 2714719326004616445}
 --- !u!114 &5438975814394774535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,9 +613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1c31941dfcfc240bc2939f9c70087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateOfFireRPS: 0
-  interval: 0
-  reloadTimer: 0
 --- !u!1 &3261774524731607467
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +799,7 @@ MonoBehaviour:
   - {x: -0.34383622, y: 0.000023461878, z: 0}
   m_ShapePathHash: -1915673191
   m_Mesh: {fileID: 0}
-  m_InstanceId: 65432
+  m_InstanceId: 107468
 --- !u!114 &3689165997038509444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,13 +1621,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6958456345740473372}
   - component: {fileID: 7946271091409083321}
+  - component: {fileID: 2714719326004616445}
   m_Layer: 2
   m_Name: BulletTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6958456345740473372
 Transform:
   m_ObjectHideFlags: 0
@@ -1680,12 +1679,12 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1322482823
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 7, y: 0, z: 1}
+  - {x: 7, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1703,7 +1702,7 @@ LineRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.048311472
+        value: 0.11111665
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1716,7 +1715,7 @@ LineRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 0.89133024, b: 0, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1750,6 +1749,20 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &2714719326004616445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8121464431980809442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84376f753b1bf5a47aa084cb2b4697cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzlePosition: {fileID: 8139030005610720281}
+  fadeSpeed: 10
 --- !u!1 &8208589609077803878
 GameObject:
   m_ObjectHideFlags: 0

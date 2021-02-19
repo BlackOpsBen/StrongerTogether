@@ -5,9 +5,9 @@ using UnityEngine;
 public class WeaponTimer : MonoBehaviour
 {
     //private Weapon weapon;
-    public float rateOfFireRPS;
-    public float interval;
-    public float reloadTimer;
+    private float rateOfFireRPS;
+    private float interval;
+    private float reloadTimer;
 
     private void Start()
     {
