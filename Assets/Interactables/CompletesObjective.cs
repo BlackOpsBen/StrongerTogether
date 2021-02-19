@@ -9,9 +9,18 @@ public class CompletesObjective : MonoBehaviour, IInteract
 
     [SerializeField] string interactionSoundName;
 
+    [SerializeField] GameObject prereqReminderUI;
+    private RectTransform rect;
+    private FadeOutText fade;
+
     private void Start()
     {
         timer = GetComponent<InteractionTimer>();
+        if (prereqReminderUI != null)
+        {
+            rect = prereqReminderUI.GetComponent<RectTransform>();
+            fade = prereqReminderUI.GetComponent<FadeOutText>();
+        }
     }
 
     public void Interact(float speedMultiplier)
@@ -38,7 +47,7 @@ public class CompletesObjective : MonoBehaviour, IInteract
                 }
             }
         }
-        else
+        else if (prereqReminderUI != null)
         {
             DisplayReminder();
         }
@@ -70,7 +79,8 @@ public class CompletesObjective : MonoBehaviour, IInteract
 
     private void DisplayReminder()
     {
-        Debug.LogWarning("Must complete other objectives first");
+        rect.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+        fade.DisplayText();
     }
 
     public void EndInteract()

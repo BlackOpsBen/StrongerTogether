@@ -21,6 +21,7 @@ public class FollowPlayer : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
+        transform.position = new Vector3(targets[0].transform.position.x, targets[0].transform.position.y, transform.position.z);
     }
     private void Update()
     {
