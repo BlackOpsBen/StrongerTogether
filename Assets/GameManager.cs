@@ -12,10 +12,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject victoryScreen;
     [SerializeField] GameObject defeatScreen;
 
+    private TrackLivingPlayers trackLivingPlayers;
+    private KillCounter killCounter;
+    private GameTimer gameTimer;
+    [SerializeField] public UpdateHUDStats hudStats;
+
+    private float sceneLoadDelay = 4.0f;
+
     private void Awake()
     {
         SingletonPattern();
         objectives = GetComponent<Objectives>();
+        trackLivingPlayers = GetComponent<TrackLivingPlayers>();
+        killCounter = GetComponent<KillCounter>();
+        gameTimer = GetComponent<GameTimer>();
     }
 
     private void SingletonPattern()
@@ -59,6 +69,8 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.StopSFXLoop("CharRun");
         AudioManager.Instance.PlaySFX("Win");
         victoryScreen.SetActive(true);
+        victoryScreen.GetComponent<DisplayEndStats>().DisplayStats(GetNumLivingPlayers(), GetKillCount(), GetElapsedTimeStamp());
+        Invoke("LoadNextLevel", sceneLoadDelay);
     }
 
     private void Lose()
@@ -67,11 +79,40 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.StopSFXLoop("CharRun");
         AudioManager.Instance.PlaySFX("Lose");
         defeatScreen.SetActive(true);
-        Invoke("RestartLevel", 4f);
+        Invoke("RestartLevel", sceneLoadDelay);
     }
 
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void LoadNextLevel()
+    {
+        int sceneCount = SceneManager.sceneCount;
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        nextScene = nextScene % sceneCount;
+        SceneManager.LoadScene(nextScene);
+    }
+
+    public int GetNumLivingPlayers()
+    {
+        return trackLivingPlayers.GetNumLivingPlayers();
+    }
+
+    public int GetKillCount()
+    {
+        return killCounter.GetKillCount();
+    }
+
+    public void IncreaseKillCount()
+    {
+        killCounter.AddKill();
+        hudStats.UpdateKills(killCounter.GetKillCount());
+    }
+
+    public string GetElapsedTimeStamp()
+    {
+        return gameTimer.GetTimeStamp();
     }
 }

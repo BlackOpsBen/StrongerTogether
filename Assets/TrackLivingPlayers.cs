@@ -19,4 +19,9 @@ public class TrackLivingPlayers : MonoBehaviour
             GameManager.Instance.EndGame(false);
         }
     }
+
+    public int GetNumLivingPlayers()
+    {
+        return livingPlayers;
+    }
 }
