@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
     private Objectives objectives;
+
+    [SerializeField] GameObject victoryScreen;
+    [SerializeField] GameObject defeatScreen;
 
     private void Awake()
     {
@@ -54,6 +58,7 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.StopSFXLoop("CharRun");
         AudioManager.Instance.PlaySFX("Win");
+        victoryScreen.SetActive(true);
     }
 
     private void Lose()
@@ -61,5 +66,12 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.StopSFXLoop("CharRun");
         AudioManager.Instance.PlaySFX("Lose");
+        defeatScreen.SetActive(true);
+        Invoke("RestartLevel", 4f);
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
