@@ -4,37 +4,16 @@ using UnityEngine;
 
 public class EnemyHurt : MonoBehaviour, IHurt
 {
-    [SerializeField] GameObject hitPFX;
-    private Transform parent;
-
-    private int maxHitPFX = 2;
-
-    private GameObject[] hitPFXPool;
-
-    private int currentIndex = 0;
+    private PFXPool hitPFXPool;
 
     private void Start()
     {
-        hitPFXPool = new GameObject[maxHitPFX];
-        parent = GameObject.FindGameObjectWithTag("HitPFXParent").transform;
+        hitPFXPool = FindObjectOfType<PFXPool>();
     }
 
     public void TriggerHurtBehavior()
     {
-        if (hitPFXPool[currentIndex] != null)
-        {
-            ParticleSystem ps = hitPFXPool[currentIndex].GetComponent<ParticleSystem>();
-            ps.Stop();
-            hitPFXPool[currentIndex].transform.position = transform.position;
-            ps.Play();
-        }
-        else
-        {
-            hitPFXPool[currentIndex] = Instantiate(hitPFX, transform.position, Quaternion.identity, parent);
-            ParticleSystem ps = hitPFXPool[currentIndex].GetComponent<ParticleSystem>();
-            ps.Play();
-        }
-        currentIndex++;
-        currentIndex = currentIndex % maxHitPFX;
+        AudioManager.Instance.PlayDialog(4, AudioManager.DIALOG_SELECTED, false); // TODO make not play 100%
+        hitPFXPool.SpawnNextInPool(transform.position);
     }
 }

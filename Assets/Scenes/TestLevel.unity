@@ -2657,6 +2657,56 @@ MonoBehaviour:
         volume: 0.5
         pitch: 1
         source: {fileID: 0}
+  - name: Aliens
+    dialogCategories:
+    - name: Selected
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 2ec457cff598dc74ab39353acf2a9191, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 4d62d94fface3ae4e8552984b190b1d7, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: d619aa63250404f4aadd183fac7f7f92, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: b1ce4d0e2161ea14184acfc64959b6d4, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+    - name: Kill
+      dialogsOptions: []
+    - name: Hurt
+      dialogsOptions: []
+    - name: Dead
+      dialogsOptions:
+      - name: 0
+        clip: {fileID: 8300000, guid: 06341a3781fa53e47aca428623c3d2b4, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 1
+        clip: {fileID: 8300000, guid: 4fe2e0a27badec94c814aaaa098ea416, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 2
+        clip: {fileID: 8300000, guid: 8834bd0c693b3ee4e997749da09fd689, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+      - name: 3
+        clip: {fileID: 8300000, guid: a9538c729d51e174f9ca57233c167c6d, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
 --- !u!4 &803898092
 Transform:
   m_ObjectHideFlags: 0
@@ -5085,7 +5135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd03c75ab83043941b8e5be51943ce0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: 1
+  spawn: 0
 --- !u!1 &1681851469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1556263486258747598, guid: f8362ef2eabec7f4d9db48c517cc44aa,
@@ -5997,8 +6047,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1851543163}
+  - component: {fileID: 1851543164}
   m_Layer: 0
-  m_Name: HitPFXParent
+  m_Name: HitPFXManager
   m_TagString: HitPFXParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6018,6 +6069,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1851543164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851543162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519922e2f2431024b8286a25f5620bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2759206275812623435, guid: 6821f84b396ca0e4aa74866d3b13ac89, type: 3}
+  maxPoolCount: 20
 --- !u!1 &1862282305
 GameObject:
   m_ObjectHideFlags: 0

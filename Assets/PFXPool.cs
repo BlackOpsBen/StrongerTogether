@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pool : MonoBehaviour
+public class PFXPool : MonoBehaviour
 {
     [SerializeField] GameObject prefab;
 
@@ -18,17 +18,24 @@ public class Pool : MonoBehaviour
         pool = new GameObject[maxPoolCount];
     }
 
-    public void GetNextInPool(Vector3 position)
+    public void SpawnNextInPool(Vector3 position)
     {
         if (pool[nextUp] != null)
         {
             Respawn(pool[nextUp], position);
         }
+        else
+        {
+            pool[nextUp] = Instantiate(prefab, transform.position, Quaternion.identity, transform);
+            pool[nextUp].GetComponent<ParticleSystem>().Play();
+        }
     }
 
     private void Respawn(GameObject item, Vector3 position)
     {
-        item.transform.position = position;
-        item.SetActive(true);
+        ParticleSystem ps = item.GetComponent<ParticleSystem>();
+        ps.Stop();
+        item.transform.position = position;        
+        ps.Play();
     }
 }
