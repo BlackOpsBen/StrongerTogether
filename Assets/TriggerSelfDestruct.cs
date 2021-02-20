@@ -38,6 +38,7 @@ public class TriggerSelfDestruct : MonoBehaviour, ITriggerEffect
             currentTime -= Time.deltaTime;
             timerText.text = GetTimeStamp();
             UpdatePulse();
+            GameManager.Instance.ShakeCamera(1f);
         }
 
         if (currentTime < float.Epsilon && !isFinished)
