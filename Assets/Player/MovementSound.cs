@@ -13,13 +13,20 @@ public class MovementSound : MonoBehaviour
 
     private void Update()
     {
-        if (movement.GetIsMoving())
-        {
-            AudioManager.Instance.PlaySFXLoop(runSound);
-        }
-        else if (movement.GetIsActive())
+        if (GameManager.Instance.GetIsPaused())
         {
             AudioManager.Instance.StopSFXLoop(runSound);
+        }
+        else
+        {
+            if (movement.GetIsMoving())
+            {
+                AudioManager.Instance.PlaySFXLoop(runSound);
+            }
+            else if (movement.GetIsActive())
+            {
+                AudioManager.Instance.StopSFXLoop(runSound);
+            }
         }
     }
 }

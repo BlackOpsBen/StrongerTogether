@@ -29,9 +29,12 @@ public class MovementAnimation : MonoBehaviour
 
     private void Update()
     {
-        Vector2 vector = facingTarget.position - transform.position;
-        UpdateSpriteAnimator(vector);
-        UpdatePosAnimators(vector);
+        if (!GameManager.Instance.GetIsPaused())
+        {
+            Vector2 vector = facingTarget.position - transform.position;
+            UpdateSpriteAnimator(vector);
+            UpdatePosAnimators(vector);
+        }
     }
 
     private void UpdateSpriteAnimator(Vector2 vector)

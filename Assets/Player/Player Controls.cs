@@ -73,6 +73,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""7565cd02-b24a-4eb6-9c97-acb963d54ad4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -350,6 +358,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""SelectPrev"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""917afc12-c86b-4679-b7cb-707cd34b01ac"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Kbrd"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8e37675-a693-4ded-b93e-2451d6fff194"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -388,6 +418,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_DefaultActionMap_Select3 = m_DefaultActionMap.FindAction("Select3", throwIfNotFound: true);
         m_DefaultActionMap_SelectNext = m_DefaultActionMap.FindAction("SelectNext", throwIfNotFound: true);
         m_DefaultActionMap_SelectPrev = m_DefaultActionMap.FindAction("SelectPrev", throwIfNotFound: true);
+        m_DefaultActionMap_Pause = m_DefaultActionMap.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -444,6 +475,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_DefaultActionMap_Select3;
     private readonly InputAction m_DefaultActionMap_SelectNext;
     private readonly InputAction m_DefaultActionMap_SelectPrev;
+    private readonly InputAction m_DefaultActionMap_Pause;
     public struct DefaultActionMapActions
     {
         private @PlayerControls m_Wrapper;
@@ -455,6 +487,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Select3 => m_Wrapper.m_DefaultActionMap_Select3;
         public InputAction @SelectNext => m_Wrapper.m_DefaultActionMap_SelectNext;
         public InputAction @SelectPrev => m_Wrapper.m_DefaultActionMap_SelectPrev;
+        public InputAction @Pause => m_Wrapper.m_DefaultActionMap_Pause;
         public InputActionMap Get() { return m_Wrapper.m_DefaultActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -485,6 +518,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SelectPrev.started -= m_Wrapper.m_DefaultActionMapActionsCallbackInterface.OnSelectPrev;
                 @SelectPrev.performed -= m_Wrapper.m_DefaultActionMapActionsCallbackInterface.OnSelectPrev;
                 @SelectPrev.canceled -= m_Wrapper.m_DefaultActionMapActionsCallbackInterface.OnSelectPrev;
+                @Pause.started -= m_Wrapper.m_DefaultActionMapActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_DefaultActionMapActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_DefaultActionMapActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_DefaultActionMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -510,6 +546,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SelectPrev.started += instance.OnSelectPrev;
                 @SelectPrev.performed += instance.OnSelectPrev;
                 @SelectPrev.canceled += instance.OnSelectPrev;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -541,5 +580,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnSelect3(InputAction.CallbackContext context);
         void OnSelectNext(InputAction.CallbackContext context);
         void OnSelectPrev(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

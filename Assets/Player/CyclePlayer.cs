@@ -48,48 +48,57 @@ public class CyclePlayer : MonoBehaviour
 
     public void SelectNext()
     {
-        playerCharacters[currentPlayer].SetIsActive(false);
-
-        for (int i = 0; i < playerCharacters.Length; i++)
+        if (!GameManager.Instance.GetIsPaused())
         {
-            currentPlayer++;
-            currentPlayer = currentPlayer % playerCharacters.Length;
+            playerCharacters[currentPlayer].SetIsActive(false);
 
-            if (playerCharacters[currentPlayer].GetComponent<Health>().GetCurrentHealth() > 0)
+            for (int i = 0; i < playerCharacters.Length; i++)
             {
-                playerCharacters[currentPlayer].SetIsActive(true);
-                PlaySelectedDialog();
-                return;
+                currentPlayer++;
+                currentPlayer = currentPlayer % playerCharacters.Length;
+
+                if (playerCharacters[currentPlayer].GetComponent<Health>().GetCurrentHealth() > 0)
+                {
+                    playerCharacters[currentPlayer].SetIsActive(true);
+                    PlaySelectedDialog();
+                    return;
+                }
             }
         }
     }
 
     private void SelectPrevious()
     {
-        playerCharacters[currentPlayer].SetIsActive(false);
-        if (currentPlayer == 0)
+        if (!GameManager.Instance.GetIsPaused())
         {
-            currentPlayer = playerCharacters.Length - 1;
+            playerCharacters[currentPlayer].SetIsActive(false);
+            if (currentPlayer == 0)
+            {
+                currentPlayer = playerCharacters.Length - 1;
+            }
+            else
+            {
+                currentPlayer--;
+            }
+            Debug.Log("currentPlayer " + currentPlayer);
+            playerCharacters[currentPlayer].SetIsActive(true);
+            PlaySelectedDialog();
         }
-        else
-        {
-            currentPlayer--;
-        }
-        Debug.Log("currentPlayer " + currentPlayer);
-        playerCharacters[currentPlayer].SetIsActive(true);
-        PlaySelectedDialog();
     }
 
     private void Select(int index)
     {
-        if (index < playerCharacters.Length)
+        if (!GameManager.Instance.GetIsPaused())
         {
-            if (playerCharacters[index].GetComponent<Health>().GetCurrentHealth() > 0)
+            if (index < playerCharacters.Length)
             {
-                playerCharacters[currentPlayer].SetIsActive(false);
-                currentPlayer = index;
-                playerCharacters[currentPlayer].SetIsActive(true);
-                PlaySelectedDialog();
+                if (playerCharacters[index].GetComponent<Health>().GetCurrentHealth() > 0)
+                {
+                    playerCharacters[currentPlayer].SetIsActive(false);
+                    currentPlayer = index;
+                    playerCharacters[currentPlayer].SetIsActive(true);
+                    PlaySelectedDialog();
+                }
             }
         }
     }

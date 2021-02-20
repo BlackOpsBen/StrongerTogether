@@ -29,10 +29,13 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        if (isActive && health.GetCurrentHealth() > 0)
+        if (!GameManager.Instance.GetIsPaused())
         {
-            MovePlayer();
-            RotatePlayer();
+            if (isActive && health.GetCurrentHealth() > 0)
+            {
+                MovePlayer();
+                RotatePlayer();
+            }
         }
     }
 

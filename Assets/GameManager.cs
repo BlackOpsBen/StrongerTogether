@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject victoryScreen;
     [SerializeField] GameObject defeatScreen;
+    [SerializeField] GameObject pauseScreen;
 
     private TrackLivingPlayers trackLivingPlayers;
     private KillCounter killCounter;
@@ -23,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] ShowCharacterStats charStats;
 
+    private bool isPaused = false;
+
+    PlayerControls controls;
+
     private void Awake()
     {
         SingletonPattern();
@@ -31,6 +36,11 @@ public class GameManager : MonoBehaviour
         killCounter = GetComponent<KillCounter>();
         gameTimer = GetComponent<GameTimer>();
         cyclePlayer = GetComponent<CyclePlayer>();
+        pauseScreen.SetActive(false);
+
+        controls = new PlayerControls();
+
+        controls.DefaultActionMap.Pause.performed += ctx => TogglePause();
     }
 
     private void SingletonPattern()
@@ -135,5 +145,35 @@ public class GameManager : MonoBehaviour
     public void UpdatePlayerHPDisplay(int player, int hp)
     {
         charStats.UpdatePlayerHP(player, hp);
+    }
+
+    public void TogglePause()
+    {
+        isPaused = !isPaused;
+        if (isPaused)
+        {
+            Time.timeScale = 0;
+            pauseScreen.SetActive(isPaused);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseScreen.SetActive(isPaused);
+        }
+    }
+
+    public bool GetIsPaused()
+    {
+        return isPaused;
+    }
+
+    private void OnEnable()
+    {
+        controls.DefaultActionMap.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.DefaultActionMap.Disable();
     }
 }
