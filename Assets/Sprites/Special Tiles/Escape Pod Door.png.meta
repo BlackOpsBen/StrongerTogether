@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 52b270f9a91d9fb4997f8085872a5b52
+guid: 65a3b86d77224b74987c541a7fb552a4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1801352244677802548
+    second: Escape Pod Door_0
+  - first:
+      213: -1243718852580029300
+    second: Escape Pod Door_1
+  - first:
+      213: 5588139306450253202
+    second: Escape Pod Door_2
+  - first:
+      213: 1491254106854042792
+    second: Escape Pod Door_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -133,7 +145,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Escape Pod Door_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256.5
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc580ac6daf4007e0800000000000000
+      internalID: -1801352244677802548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Escape Pod Door_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256.5
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cc2870b4c6dbee0800000000000000
+      internalID: -1243718852580029300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Escape Pod Door_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256.5
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2957d5c871f0d8d40800000000000000
+      internalID: 5588139306450253202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Escape Pod Door_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256.5
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aca0ec85bff1b410800000000000000
+      internalID: 1491254106854042792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

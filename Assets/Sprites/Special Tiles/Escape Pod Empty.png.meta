@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: 52b270f9a91d9fb4997f8085872a5b52
+guid: 639412e24bb0ef7458727d9bfbfeaaf3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3029237914050901581
+    second: Escape Pod Empty_0
+  - first:
+      213: -4015249704948933283
+    second: Escape Pod Empty_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,7 +139,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Escape Pod Empty_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512.5
+        width: 513
+        height: 512.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9c9d0ba2cf5f5d0800000000000000
+      internalID: -3029237914050901581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Escape Pod Empty_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 513
+        height: 512.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dd604caa7f648c0800000000000000
+      internalID: -4015249704948933283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

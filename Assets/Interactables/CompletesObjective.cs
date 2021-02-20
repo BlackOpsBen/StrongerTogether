@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,9 @@ public class CompletesObjective : MonoBehaviour, IInteract
     [SerializeField] GameObject prereqReminderUI;
     private RectTransform rect;
     private FadeOutText fade;
+
+    [SerializeField] SpriteRenderer[] spritesToChange;
+    [SerializeField] Sprite[] to;
 
     private void Start()
     {
@@ -63,6 +67,19 @@ public class CompletesObjective : MonoBehaviour, IInteract
 
         GameManager.Instance.GetObjectives().CompleteObjective(completesObjective);
         timer.ResetProgress();
+
+        ChangeSprites();
+    }
+
+    private void ChangeSprites()
+    {
+        for (int i = 0; i < spritesToChange.Length; i++)
+        {
+            if (to[i] != null)
+            {
+                spritesToChange[i].sprite = to[i];
+            }
+        }
     }
 
     private bool CheckPrereqsComplete()
