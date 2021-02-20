@@ -8,9 +8,12 @@ public class PlayerDeath : MonoBehaviour, IDie
 
     private CircleCollider2D circleCollider;
 
+    private PFXPool deathPFXPool;
+
     private void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+        deathPFXPool = FindObjectOfType<PFXManager>().GetDeathPool();
     }
 
     public void Die()
@@ -24,6 +27,7 @@ public class PlayerDeath : MonoBehaviour, IDie
         AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_DEAD, false);
         GameManager.Instance.GetComponent<TrackLivingPlayers>().ReduceLivingPlayers();
         GameManager.Instance.UpdatePlayerHPDisplay(int.Parse(gameObject.name), GetComponent<Health>().GetCurrentHealth());
+        deathPFXPool.SpawnNextInPlayerPool(transform.position + Vector3.up);
     }
 
     private void DisableObjects()

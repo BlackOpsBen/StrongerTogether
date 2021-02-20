@@ -6036,8 +6036,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1851543163}
   - component: {fileID: 1851543164}
+  - component: {fileID: 1851543166}
+  - component: {fileID: 1851543165}
   m_Layer: 0
-  m_Name: HitPFXManager
+  m_Name: PFXManager
   m_TagString: HitPFXParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6075,6 +6077,38 @@ MonoBehaviour:
     type: 3}
   playerMaxPoolCount: 8
   enemyMaxPoolCount: 20
+--- !u!114 &1851543165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851543162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519922e2f2431024b8286a25f5620bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHitPFX: {fileID: 2759206275812623435, guid: da17cdca0aa2e9a409416bbe757ddb91,
+    type: 3}
+  enemyHitPFX: {fileID: 2759206275812623435, guid: 5e105b30788e99044bb2353692e93311,
+    type: 3}
+  playerMaxPoolCount: 8
+  enemyMaxPoolCount: 20
+--- !u!114 &1851543166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851543162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841798ae83e33b84e8cfa344d1c64a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPool: {fileID: 1851543164}
+  deathPool: {fileID: 1851543165}
 --- !u!1 &1862282305
 GameObject:
   m_ObjectHideFlags: 0

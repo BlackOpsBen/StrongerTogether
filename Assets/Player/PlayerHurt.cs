@@ -8,7 +8,7 @@ public class PlayerHurt : MonoBehaviour, IHurt
 
     private void Start()
     {
-        hitPFXPool = FindObjectOfType<PFXPool>();
+        hitPFXPool = FindObjectOfType<PFXManager>().GetHitPool();
     }
 
     public void TriggerHurtBehavior()
