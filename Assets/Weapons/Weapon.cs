@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] Light2D[] muzzleFlashLights;
     [SerializeField] SpriteRenderer[] muzzleFlashSprites;
     [SerializeField] DrawBulletTrail bulletTrail;
+    [SerializeField] ParticleSystem[] pfx;
 
     private float flashIntensity = 0.0f;
     private float flashSpeed = 10f;
@@ -66,6 +67,12 @@ public class Weapon : MonoBehaviour
 
     private void ShowMuzzleFlash()
     {
+        for (int i = 0; i < pfx.Length; i++)
+        {
+            Debug.Log("Flash!");
+            pfx[i].Stop();
+            pfx[i].Play();
+        }
         flashIntensity = 1.0f;
     }
 

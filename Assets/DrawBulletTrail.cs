@@ -25,7 +25,6 @@ public class DrawBulletTrail : MonoBehaviour
 
     public void Draw(Vector3 dest)
     {
-        Debug.Log("Drawing bullet");
         fade = 1f;
         lr.SetPosition(0, muzzlePosition.position);
         lr.SetPosition(1, dest);
