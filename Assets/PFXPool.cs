@@ -5,29 +5,47 @@ using UnityEngine;
 
 public class PFXPool : MonoBehaviour
 {
-    [SerializeField] GameObject prefab;
+    [SerializeField] GameObject playerHitPFX;
+    [SerializeField] GameObject enemyHitPFX;
 
-    [SerializeField] int maxPoolCount = 20;
+    [SerializeField] int playerMaxPoolCount = 8;
+    [SerializeField] int enemyMaxPoolCount = 20;
 
-    private GameObject[] pool;
+    private GameObject[] playerPool;
+    private GameObject[] enemyPool;
 
-    int nextUp = 0;
+    int playerNextUp = 0;
+    int enemyNextUp = 0;
 
     private void Start()
     {
-        pool = new GameObject[maxPoolCount];
+        playerPool = new GameObject[playerMaxPoolCount];
+        enemyPool = new GameObject[enemyMaxPoolCount];
     }
 
-    public void SpawnNextInPool(Vector3 position)
+    public void SpawnNextInPlayerPool(Vector3 position)
     {
-        if (pool[nextUp] != null)
+        if (playerPool[playerNextUp] != null)
         {
-            Respawn(pool[nextUp], position);
+            Respawn(playerPool[playerNextUp], position);
         }
         else
         {
-            pool[nextUp] = Instantiate(prefab, transform.position, Quaternion.identity, transform);
-            pool[nextUp].GetComponent<ParticleSystem>().Play();
+            playerPool[playerNextUp] = Instantiate(playerHitPFX, transform.position, Quaternion.identity, transform);
+            playerPool[playerNextUp].GetComponent<ParticleSystem>().Play();
+        }
+    }
+
+    public void SpawnNextInEnemyPool(Vector3 position)
+    {
+        if (enemyPool[enemyNextUp] != null)
+        {
+            Respawn(enemyPool[enemyNextUp], position);
+        }
+        else
+        {
+            enemyPool[enemyNextUp] = Instantiate(enemyHitPFX, transform.position, Quaternion.identity, transform);
+            enemyPool[enemyNextUp].GetComponent<ParticleSystem>().Play();
         }
     }
 

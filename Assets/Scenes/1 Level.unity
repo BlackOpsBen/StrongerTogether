@@ -6069,8 +6069,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519922e2f2431024b8286a25f5620bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2759206275812623435, guid: 6821f84b396ca0e4aa74866d3b13ac89, type: 3}
-  maxPoolCount: 20
+  playerHitPFX: {fileID: 2759206275812623435, guid: 6821f84b396ca0e4aa74866d3b13ac89,
+    type: 3}
+  enemyHitPFX: {fileID: 2759206275812623435, guid: e94e3eeadc1f2274eb370623ad129db5,
+    type: 3}
+  playerMaxPoolCount: 8
+  enemyMaxPoolCount: 20
 --- !u!1 &1862282305
 GameObject:
   m_ObjectHideFlags: 0
