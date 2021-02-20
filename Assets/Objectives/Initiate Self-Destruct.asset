@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 715459e54f2bd7d4298fac76cfd200d3, type: 3}
-  m_Name: Restore Power
+  m_Name: Initiate Self-Destruct
   m_EditorClassIdentifier: 
-  text: Find the generator room and restore power to the escape pod bay.
+  text: Find the generator room and rig it to self-destruct.
+  prereqObjectives: []
+  optionalCompletionSFX: 

@@ -6,6 +6,7 @@ using UnityEngine;
 public class CompletesObjective : MonoBehaviour, IInteract
 {
     [SerializeField] Objective completesObjective;
+    private ITriggerEffect optionalTriggerOnComplete;
     private InteractionTimer timer;
 
     [SerializeField] string interactionSoundName;
@@ -25,6 +26,8 @@ public class CompletesObjective : MonoBehaviour, IInteract
             rect = prereqReminderUI.GetComponent<RectTransform>();
             fade = prereqReminderUI.GetComponent<FadeOutText>();
         }
+
+        optionalTriggerOnComplete = GetComponent<ITriggerEffect>();
     }
 
     public void Interact(float speedMultiplier)
@@ -69,6 +72,11 @@ public class CompletesObjective : MonoBehaviour, IInteract
         timer.ResetProgress();
 
         ChangeSprites();
+
+        if (optionalTriggerOnComplete != null)
+        {
+            optionalTriggerOnComplete.Trigger();
+        }
     }
 
     private void ChangeSprites()
