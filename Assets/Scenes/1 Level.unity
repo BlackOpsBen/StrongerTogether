@@ -4269,12 +4269,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Scientist Found
     clip: {fileID: 8300000, guid: 937fa64a094bd6641bbf43d0ac518044, type: 3}
-    volume: 0.5
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
   - name: Objectives
     clip: {fileID: 8300000, guid: 6ae45a902dd19d8428298227db5173d8, type: 3}
-    volume: 0.5
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
   characterSoundGroups:

@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Rescue the Scientist
   m_EditorClassIdentifier: 
   text: Find the last known survivor.
+  prereqObjectives: []
+  optionalCompletionSFX: Scientist Found
