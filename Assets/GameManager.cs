@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     PlayerControls controls;
 
+    [SerializeField] CameraShake cameraShake;
+
     private void Awake()
     {
         SingletonPattern();
@@ -165,6 +167,11 @@ public class GameManager : MonoBehaviour
     public bool GetIsPaused()
     {
         return isPaused;
+    }
+
+    public void ShakeCamera(float amount)
+    {
+        cameraShake.AddShake(amount);
     }
 
     private void OnEnable()

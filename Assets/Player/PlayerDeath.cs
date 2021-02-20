@@ -28,6 +28,7 @@ public class PlayerDeath : MonoBehaviour, IDie
         GameManager.Instance.GetComponent<TrackLivingPlayers>().ReduceLivingPlayers();
         GameManager.Instance.UpdatePlayerHPDisplay(int.Parse(gameObject.name), GetComponent<Health>().GetCurrentHealth());
         deathPFXPool.SpawnNextInPlayerPool(transform.position + Vector3.up);
+        GameManager.Instance.ShakeCamera(1f);
     }
 
     private void DisableObjects()

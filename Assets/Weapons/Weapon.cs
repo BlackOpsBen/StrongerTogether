@@ -39,6 +39,7 @@ public class Weapon : MonoBehaviour
         if (weaponTimer.GetIsReady())
         {
             FireShot(target);
+            GameManager.Instance.ShakeCamera(0.5f);
             bulletTrail.Draw(target.position);
             weaponTimer.Reset();
         }
