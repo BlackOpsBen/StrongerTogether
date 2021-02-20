@@ -10,6 +10,7 @@ public class WeaponTemplate : ScriptableObject
     [SerializeField] float firingArc;
     [SerializeField] float rateOfFireRPS;
     [SerializeField] int damage;
+    [SerializeField] Sprite icon;
 
     //private bool isReady = true;
     //private float reloadTimer;
@@ -57,5 +58,10 @@ public class WeaponTemplate : ScriptableObject
     public int GetDamage()
     {
         return damage;
+    }
+
+    public Sprite GetIcon()
+    {
+        return icon;
     }
 }

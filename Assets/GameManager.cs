@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     private float sceneLoadDelay = 4.0f;
 
+    private CyclePlayer cyclePlayer;
+
     private void Awake()
     {
         SingletonPattern();
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
         trackLivingPlayers = GetComponent<TrackLivingPlayers>();
         killCounter = GetComponent<KillCounter>();
         gameTimer = GetComponent<GameTimer>();
+        cyclePlayer = GetComponent<CyclePlayer>();
     }
 
     private void SingletonPattern()
@@ -64,7 +67,7 @@ public class GameManager : MonoBehaviour
         {
             playersEscapes[i].DoEscape();
         }
-        GetComponent<CyclePlayer>().enabled = false;
+        cyclePlayer.enabled = false;
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.StopSFXLoop("CharRun");
         AudioManager.Instance.PlaySFX("Win");
@@ -114,5 +117,16 @@ public class GameManager : MonoBehaviour
     public string GetElapsedTimeStamp()
     {
         return gameTimer.GetTimeStamp();
+    }
+
+    public GameObject[] GetPlayers()
+    {
+        Movement[] movements = cyclePlayer.GetPlayerCharacters();
+        GameObject[] objects = new GameObject[movements.Length];
+        for (int i = 0; i < movements.Length; i++)
+        {
+            objects[i] = movements[i].gameObject;
+        }
+        return objects;
     }
 }

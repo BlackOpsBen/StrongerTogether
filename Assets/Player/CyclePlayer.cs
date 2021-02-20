@@ -22,11 +22,12 @@ public class CyclePlayer : MonoBehaviour
         controls.DefaultActionMap.Select1.performed += ctx => Select(1);
         controls.DefaultActionMap.Select2.performed += ctx => Select(2);
         controls.DefaultActionMap.Select3.performed += ctx => Select(3);
+
+        playerCharacters = FindObjectsOfType<Movement>();
     }
 
     private void Start()
     {
-        playerCharacters = FindObjectsOfType<Movement>();
         for (int i = 0; i < playerCharacters.Length; i++)
         {
             playerCharacters[i].name = i.ToString();
@@ -106,5 +107,10 @@ public class CyclePlayer : MonoBehaviour
     private void PlaySelectedDialog()
     {
         AudioManager.Instance.PlayDialog(currentPlayer, AudioManager.DIALOG_SELECTED, false);
+    }
+
+    public Movement[] GetPlayerCharacters()
+    {
+        return playerCharacters;
     }
 }
