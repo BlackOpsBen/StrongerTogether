@@ -69,8 +69,6 @@ public class Weapon : MonoBehaviour
     {
         for (int i = 0; i < pfx.Length; i++)
         {
-            Debug.Log("Flash!");
-            pfx[i].Stop();
             pfx[i].Play();
         }
         flashIntensity = 1.0f;

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
 public class FollowPlayer : MonoBehaviour
 {
     public List<Transform> targets;
@@ -20,7 +19,7 @@ public class FollowPlayer : MonoBehaviour
 
     private void Start()
     {
-        cam = GetComponent<Camera>();
+        cam = GetComponentInChildren<Camera>();
         transform.position = new Vector3(targets[0].transform.position.x, targets[0].transform.position.y, transform.position.z);
     }
     private void Update()
