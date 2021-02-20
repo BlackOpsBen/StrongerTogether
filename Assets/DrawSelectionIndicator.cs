@@ -14,7 +14,7 @@ public class DrawSelectionIndicator : MonoBehaviour
 
     private Movement movement;
 
-    private void Start()
+    private void Awake()
     {
         movement = GetComponent<Movement>();
         lr = GetComponent<LineRenderer>();
