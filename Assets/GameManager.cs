@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
         victoryScreen.SetActive(true);
         victoryScreen.GetComponent<DisplayEndStats>().DisplayStats(GetNumLivingPlayers(), GetKillCount(), GetElapsedTimeStamp());
         Invoke("LoadNextLevel", sceneLoadDelay);
+        FindObjectOfType<TriggerSelfDestruct>().Stop();
     }
 
     private void Lose()
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.PlaySFX("Lose");
         defeatScreen.SetActive(true);
         Invoke("RestartLevel", sceneLoadDelay);
+        FindObjectOfType<TriggerSelfDestruct>().Stop();
     }
 
     private void RestartLevel()

@@ -78,4 +78,9 @@ public class TriggerSelfDestruct : MonoBehaviour, ITriggerEffect
         isStarted = true;
         AudioManager.Instance.PlaySFXLoop("Alarm");
     }
+
+    public void Stop()
+    {
+        isStarted = false;
+    }
 }
