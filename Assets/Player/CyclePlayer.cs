@@ -72,17 +72,25 @@ public class CyclePlayer : MonoBehaviour
         if (!GameManager.Instance.GetIsPaused())
         {
             playerCharacters[currentPlayer].SetIsActive(false);
-            if (currentPlayer == 0)
+
+            for (int i = 0; i < playerCharacters.Length; i++)
             {
-                currentPlayer = playerCharacters.Length - 1;
+                if (currentPlayer == 0)
+                {
+                    currentPlayer = playerCharacters.Length - 1;
+                }
+                else
+                {
+                    currentPlayer--;
+                }
+
+                if (playerCharacters[currentPlayer].GetComponent<Health>().GetCurrentHealth() > 0)
+                {
+                    playerCharacters[currentPlayer].SetIsActive(true);
+                    PlaySelectedDialog();
+                    return;
+                }
             }
-            else
-            {
-                currentPlayer--;
-            }
-            Debug.Log("currentPlayer " + currentPlayer);
-            playerCharacters[currentPlayer].SetIsActive(true);
-            PlaySelectedDialog();
         }
     }
 
