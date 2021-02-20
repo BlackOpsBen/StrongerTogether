@@ -13,6 +13,8 @@ public class FollowPlayer : MonoBehaviour
 
     public float maxZoom = 3f;
 
+    public float divisor = 15f;
+
     private Camera cam;
 
     Bounds bounds;
@@ -71,7 +73,7 @@ public class FollowPlayer : MonoBehaviour
     private void Zoom()
     {
         float largestSide = Mathf.Max(bounds.size.x, bounds.size.y);
-        float newZoom = Mathf.Lerp(maxZoom, minZoom, largestSide / 15f);
+        float newZoom = Mathf.Lerp(maxZoom, minZoom, largestSide / divisor);
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, newZoom, Time.deltaTime * trackSpeed);
     }
 }
