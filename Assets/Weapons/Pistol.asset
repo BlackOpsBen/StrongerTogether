@@ -17,3 +17,4 @@ MonoBehaviour:
   firingArc: 60
   rateOfFireRPS: 3
   damage: 3
+  icon: {fileID: 21300000, guid: 5da18a0219c4fc841ab19bd9b707da79, type: 3}

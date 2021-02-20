@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] int maxHP = 5;
-    public int currentHP;
+    private int currentHP;
     private IDie deathBehavior;
     private IHurt hurtBehavior;
 

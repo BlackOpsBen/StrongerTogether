@@ -7,7 +7,7 @@ public class FadeOutText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
 
-    private float fade = 1f;
+    private float fade = 0f;
     private float fadeSpeed = 5f;
 
     private void Update()

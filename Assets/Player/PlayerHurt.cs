@@ -15,5 +15,6 @@ public class PlayerHurt : MonoBehaviour, IHurt
     {
         AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_HURT, false);
         hitPFXPool.SpawnNextInPool(transform.position);
+        GameManager.Instance.UpdatePlayerHPDisplay(int.Parse(gameObject.name), GetComponent<Health>().GetCurrentHealth());
     }
 }

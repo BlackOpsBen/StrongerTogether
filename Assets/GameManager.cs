@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     private CyclePlayer cyclePlayer;
 
+    [SerializeField] ShowCharacterStats charStats;
+
     private void Awake()
     {
         SingletonPattern();
@@ -128,5 +130,10 @@ public class GameManager : MonoBehaviour
             objects[i] = movements[i].gameObject;
         }
         return objects;
+    }
+
+    public void UpdatePlayerHPDisplay(int player, int hp)
+    {
+        charStats.UpdatePlayerHP(player, hp);
     }
 }

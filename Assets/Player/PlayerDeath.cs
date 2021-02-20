@@ -23,6 +23,7 @@ public class PlayerDeath : MonoBehaviour, IDie
         }
         AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_DEAD, false);
         GameManager.Instance.GetComponent<TrackLivingPlayers>().ReduceLivingPlayers();
+        GameManager.Instance.UpdatePlayerHPDisplay(int.Parse(gameObject.name), GetComponent<Health>().GetCurrentHealth());
     }
 
     private void DisableObjects()
