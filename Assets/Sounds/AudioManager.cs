@@ -21,16 +21,23 @@ public class AudioManager : MonoBehaviour
     [Header("Music")]
     [SerializeField] AudioSource musicAudioSource;
 
+    [Header("Commander Reminders")]
+    public Sound[] reminders;
+
     private bool someoneIsSpeaking = false;
     private float speakingDuration = 0f;
 
     private DialogLimiter dialogLimiter;
+
+    private float timeSinceLastReminder = 4f;
+    private float reminderInterval = 5f;
 
     private void Awake()
     {
         dialogLimiter = GetComponent<DialogLimiter>();
         SingletonPattern();
         CreateAudioSources(ref SFX);
+        CreateAudioSources(ref reminders);
         for (int i = 0; i < characterSoundGroups.Length; i++)
         {
             //CreateAudioSources(ref characterSoundGroups[i].selected);
@@ -73,6 +80,8 @@ public class AudioManager : MonoBehaviour
         {
             speakingDuration -= Time.deltaTime;
         }
+
+        timeSinceLastReminder += Time.deltaTime;
     }
 
     private void CreateAudioSources(ref Sound[] sounds)
@@ -132,6 +141,18 @@ public class AudioManager : MonoBehaviour
         }
 
         s.source.Play();
+    }
+
+    public void PlayObjectiveReminder()
+    {
+        int maxOption = reminders.Length;
+        int selectedOption = UnityEngine.Random.Range(0, maxOption);
+        Sound s = reminders[selectedOption];
+        if (timeSinceLastReminder > reminderInterval)
+        {
+            s.source.Play();
+            timeSinceLastReminder = 0f;
+        }
     }
 
     public bool GetIsSomeoneSpeaking()

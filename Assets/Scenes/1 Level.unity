@@ -4267,6 +4267,16 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
+  - name: Scientist Found
+    clip: {fileID: 8300000, guid: 937fa64a094bd6641bbf43d0ac518044, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Objectives
+    clip: {fileID: 8300000, guid: 6ae45a902dd19d8428298227db5173d8, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
   characterSoundGroups:
   - name: Char0
     dialogCategories:
@@ -4699,6 +4709,27 @@ MonoBehaviour:
         pitch: 1
         source: {fileID: 0}
   musicAudioSource: {fileID: 803898094}
+  reminders:
+  - name: 0
+    clip: {fileID: 8300000, guid: 22854210f1c80164cbe926844da67db9, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: 1
+    clip: {fileID: 8300000, guid: c9dd50c0c8ec3444dbe34955f6a28e9d, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: 2
+    clip: {fileID: 8300000, guid: 7c1705c5b7381a8428853ebd56b05461, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: 3
+    clip: {fileID: 8300000, guid: 5df7d2c16995a6349916c2200797f365, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &803898092
 Transform:
   m_ObjectHideFlags: 0
@@ -10656,7 +10687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd03c75ab83043941b8e5be51943ce0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: 1
+  spawn: 0
 --- !u!114 &1657904036
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ public class Interact : MonoBehaviour
         IInteract interactable = collision.gameObject.GetComponent<IInteract>();
         if (interactable != null)
         {
-            Debug.Log(transform.parent.name + " is interacting with " + collision.name);
             interactable.Interact(interactionMultiplier);
         }
     }
@@ -20,7 +19,6 @@ public class Interact : MonoBehaviour
         IInteract interactable = collision.gameObject.GetComponent<IInteract>();
         if (interactable != null)
         {
-            Debug.Log(transform.parent.name + " is done with " + collision.name);
             interactable.EndInteract();
         }
     }

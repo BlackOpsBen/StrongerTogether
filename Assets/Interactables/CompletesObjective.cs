@@ -98,6 +98,7 @@ public class CompletesObjective : MonoBehaviour, IInteract
     {
         rect.transform.position = Camera.main.WorldToScreenPoint(transform.position);
         fade.DisplayText();
+        AudioManager.Instance.PlayObjectiveReminder();
     }
 
     public void EndInteract()
