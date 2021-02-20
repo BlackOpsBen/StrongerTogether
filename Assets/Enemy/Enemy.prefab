@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
-  currentHP: 0
 --- !u!114 &3232149907556252251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,8 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3b4c4f5d4bcff46ab72487dc8f530d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPFX: {fileID: 2759206275812623435, guid: 6821f84b396ca0e4aa74866d3b13ac89, type: 3}
-  parent: {fileID: 0}
 --- !u!114 &7845320225941100070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +232,7 @@ MonoBehaviour:
   - {x: -0.25, y: 0.25, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 142710
+  m_InstanceId: 74396
 --- !u!114 &3644557720961497783
 MonoBehaviour:
   m_ObjectHideFlags: 0

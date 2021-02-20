@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 9066931663010774560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9066931664148711764}
   m_RootOrder: 0
@@ -224,7 +224,7 @@ Transform:
   m_GameObject: {fileID: 9066931664148711761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9066931663010774561}
   m_Father: {fileID: 9066931663872267183}
@@ -269,13 +269,12 @@ SpriteRenderer:
   m_SortingLayerID: -1322482823
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -564187341237072398, guid: 993c2335ceb4fca439270d2e98e4aa01,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a1c6d24efb5653469bde7a5eb7cf453, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.6666667, y: 0.6666667}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -296,10 +295,8 @@ MonoBehaviour:
   thisCollider: {fileID: 9066931664148711754}
   thatCollider: {fileID: 9066931664804291924}
   startDisabled: 0
-  disabledState: {fileID: -3526119571052431214, guid: 993c2335ceb4fca439270d2e98e4aa01,
-    type: 3}
-  enabledState: {fileID: -564187341237072398, guid: 993c2335ceb4fca439270d2e98e4aa01,
-    type: 3}
+  disabledState: {fileID: 21300000, guid: bf31ea7252c68f848b38111acfe30780, type: 3}
+  enabledState: {fileID: 21300000, guid: 5a1c6d24efb5653469bde7a5eb7cf453, type: 3}
   interactionSoundName: Pressing
   openCloseSoundName: Door
 --- !u!114 &9066931664148711765
@@ -364,14 +361,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 0.6666667, y: 0.6666667}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &9066931664804291923
 GameObject:
@@ -447,8 +444,7 @@ SpriteRenderer:
   m_SortingLayerID: -1322482823
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5000442432590359294, guid: f1d2611f8e8404b4dbc1205928a4d935,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f34955e4647513418f8f3ab587e5c01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -476,7 +472,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1, y: 1.0039062}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -500,10 +496,8 @@ MonoBehaviour:
   thisCollider: {fileID: 9066931664804291924}
   thatCollider: {fileID: 9066931664148711754}
   startDisabled: 1
-  disabledState: {fileID: 5040949340825292554, guid: f1d2611f8e8404b4dbc1205928a4d935,
-    type: 3}
-  enabledState: {fileID: 5000442432590359294, guid: f1d2611f8e8404b4dbc1205928a4d935,
-    type: 3}
+  disabledState: {fileID: 21300000, guid: 8f1d8eefbb3da894f86c50f6612e9114, type: 3}
+  enabledState: {fileID: 21300000, guid: 1f34955e4647513418f8f3ab587e5c01, type: 3}
   interactionSoundName: Pressing
   openCloseSoundName: Door
 --- !u!114 &9066931664804291920
