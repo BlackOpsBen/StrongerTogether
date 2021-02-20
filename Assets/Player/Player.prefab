@@ -779,6 +779,7 @@ MonoBehaviour:
   - {fileID: 3261774525539720104}
   - {fileID: 3261774526555098664}
   - {fileID: 3261774524549477223}
+  - {fileID: 4503971177757859041}
 --- !u!114 &8731166513679555143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +833,7 @@ MonoBehaviour:
   - {x: -0.34383622, y: 0.000023461878, z: 0}
   m_ShapePathHash: -1915673191
   m_Mesh: {fileID: 0}
-  m_InstanceId: 55268
+  m_InstanceId: 265076
 --- !u!114 &3689165997038509444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,6 +1007,7 @@ MonoBehaviour:
   - {fileID: 3261774525539720104}
   - {fileID: 3261774526555098664}
   - {fileID: 3261774524549477223}
+  - {fileID: 4503971177757859041}
 --- !u!1 &3261774525539720104
 GameObject:
   m_ObjectHideFlags: 0
