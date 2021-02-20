@@ -10,20 +10,22 @@ public class DisplayObjectives : MonoBehaviour
     [SerializeField] GameObject objectiveParent;
     private GameObject[] objectiveListItems;
 
-    public float initialOffset = 50f;
-    public float offset = 100f;
+    public float initialOffset = -80f;
+    public float yOffset = -60f;
+    public float xOffset = 12;
 
     private void Start()
     {
         Objective[] objectives = GameManager.Instance.GetObjectives().GetObjectives();
         objectiveListItems = new GameObject[objectives.Length];
 
-        Vector3 initialPosition = new Vector3(objectiveParent.transform.position.x, objectiveParent.transform.position.y - initialOffset, objectiveParent.transform.position.z);
+        //Vector3 initialPosition = new Vector3(objectiveParent.transform.position.x, objectiveParent.transform.position.y - initialOffset, objectiveParent.transform.position.z);
 
         for (int i = 0; i < objectives.Length; i++)
         {
             objectiveListItems[i] = Instantiate(objectiveListItem, objectiveParent.transform);
-            objectiveListItems[i].transform.position = new Vector3(initialPosition.x, initialPosition.y - (offset * i), initialPosition.z);
+            //objectiveListItems[i].transform.position = new Vector3(initialPosition.x, initialPosition.y - (offset * i), initialPosition.z);
+            objectiveListItems[i].GetComponent<RectTransform>().localPosition = new Vector3(xOffset, yOffset * i + initialOffset, 0);
             TextMeshProUGUI[] textFields = objectiveListItems[i].GetComponentsInChildren<TextMeshProUGUI>();
             for (int j = 0; j < textFields.Length; j++)
             {
