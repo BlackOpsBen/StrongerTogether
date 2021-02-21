@@ -17,5 +17,16 @@ public class EnemyDeath : MonoBehaviour, IDie
         gameObject.SetActive(false);
         GameManager.Instance.IncreaseKillCount();
         deathPFXPool.SpawnNextInEnemyPool(transform.position + Vector3.up);
+        RandomlyDropBody();
+    }
+
+    private void RandomlyDropBody()
+    {
+        int oddsMax = 3;
+        int rand = UnityEngine.Random.Range(0, oddsMax);
+        if (rand == 0)
+        {
+            GameManager.Instance.DropDeadBody(transform.position);
+        }
     }
 }

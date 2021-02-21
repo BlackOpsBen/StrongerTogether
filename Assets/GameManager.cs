@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
 
     private MenuManager instructionsScreen;
 
+    [SerializeField] Pool[] deadBodyPools;
+    [SerializeField] Pool bloodSplatPool;
+
     private void Awake()
     {
         SingletonPattern();
@@ -179,6 +182,23 @@ public class GameManager : MonoBehaviour
     public void ShakeCamera(float amount)
     {
         cameraShake.AddShake(amount);
+    }
+
+    public void DropDeadBody(Vector3 position)
+    {
+        if (deadBodyPools.Length > 0)
+        {
+            int rand = UnityEngine.Random.Range(0, deadBodyPools.Length);
+            deadBodyPools[rand].SpawnNextItem(position);
+        }
+    }
+
+    public void DropBloodSplat(Vector3 position)
+    {
+        if (bloodSplatPool != null)
+        {
+            bloodSplatPool.SpawnNextItem(position);
+        }
     }
 
     private void OnEnable()
