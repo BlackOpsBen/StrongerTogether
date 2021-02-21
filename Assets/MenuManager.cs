@@ -11,8 +11,14 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        instructionsMenu.SetActive(false);
-        creditsMenu.SetActive(false);
+        if (instructionsMenu != null)
+        {
+            instructionsMenu.SetActive(false);
+        }
+        if (creditsMenu != null)
+        {
+            creditsMenu.SetActive(false);
+        }
         if (mainMenu != null)
         {
             mainMenu.SetActive(true);
@@ -26,7 +32,10 @@ public class MenuManager : MonoBehaviour
 
     public void ShowInstructions(bool value)
     {
-        instructionsMenu.SetActive(value);
+        if (instructionsMenu != null)
+        {
+            instructionsMenu.SetActive(value);
+        }
         if (mainMenu != null)
         {
             mainMenu.SetActive(!value);
@@ -35,7 +44,10 @@ public class MenuManager : MonoBehaviour
 
     public void ShowCredits(bool value)
     {
-        creditsMenu.SetActive(value);
+        if (creditsMenu != null)
+        {
+            creditsMenu.SetActive(value);
+        }
         if (mainMenu != null)
         {
             mainMenu.SetActive(!value);
