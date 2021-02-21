@@ -17,6 +17,7 @@ public class Pool : MonoBehaviour
 
     public GameObject SpawnNextItem(Vector3 position)
     {
+        GameObject itemToReturn;
         if (poolItems[currentItem] != null)
         {
             poolItems[currentItem].transform.position = GetPosition(position);
@@ -26,7 +27,12 @@ public class Pool : MonoBehaviour
         {
             poolItems[currentItem] = Instantiate(item, GetPosition(position), GetRotation(), transform);
         }
-        return poolItems[currentItem++];
+        itemToReturn = poolItems[currentItem];
+
+        currentItem++;
+        currentItem = currentItem % maxItems;
+
+        return itemToReturn;
 
     }
 
