@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] CameraShake cameraShake;
 
+    private MenuManager instructionsScreen;
+
     private void Awake()
     {
         SingletonPattern();
@@ -43,6 +45,8 @@ public class GameManager : MonoBehaviour
         controls = new PlayerControls();
 
         controls.DefaultActionMap.Pause.performed += ctx => TogglePause();
+
+        instructionsScreen = GetComponent<MenuManager>();
     }
 
     private void SingletonPattern()
@@ -163,6 +167,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
             pauseScreen.SetActive(isPaused);
+            instructionsScreen.ShowInstructions(isPaused);
         }
     }
 

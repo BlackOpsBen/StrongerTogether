@@ -11,7 +11,10 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         instructionsMenu.SetActive(false);
-        mainMenu.SetActive(true);
+        if (mainMenu != null)
+        {
+            mainMenu.SetActive(true);
+        }
     }
 
     public void PlayGame()
@@ -22,7 +25,10 @@ public class MenuManager : MonoBehaviour
     public void ShowInstructions(bool value)
     {
         instructionsMenu.SetActive(value);
-        mainMenu.SetActive(!value);
+        if (mainMenu != null)
+        {
+            mainMenu.SetActive(!value);
+        }
     }
 
 
