@@ -18,3 +18,4 @@ MonoBehaviour:
   rateOfFireRPS: 1.5
   damage: 5
   icon: {fileID: 21300000, guid: e8ff2dc66df546243818307eca9ea37d, type: 3}
+  soundCue: {fileID: 11400000, guid: ecf16542d8fbb4f3290fe975e8472c3a, type: 2}

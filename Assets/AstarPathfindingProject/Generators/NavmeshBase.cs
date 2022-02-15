@@ -840,7 +840,6 @@ namespace Pathfinding {
 				if (nodes[i] != null) batchNodesToDestroy.Add(nodes[i]);
 			}
 			ObjectPool<BBTree>.Release (ref tile.bbTree);
-			// TODO: Pool tile object and various arrays in it?
 			tiles[x + z*tileXCount] = null;
 		}
 

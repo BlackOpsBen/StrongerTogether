@@ -11,6 +11,7 @@ public class WeaponTemplate : ScriptableObject
     [SerializeField] float rateOfFireRPS;
     [SerializeField] int damage;
     [SerializeField] Sprite icon;
+    [SerializeField] SoundCue soundCue;
 
     //private bool isReady = true;
     //private float reloadTimer;
@@ -63,5 +64,10 @@ public class WeaponTemplate : ScriptableObject
     public Sprite GetIcon()
     {
         return icon;
+    }
+
+    public string GetSoundCueName()
+    {
+        return soundCue.name;
     }
 }

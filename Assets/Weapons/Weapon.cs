@@ -29,13 +29,6 @@ public class Weapon : MonoBehaviour
 
     public void PullTrigger(Transform target)
     {
-        /*if (equippedWeapon.GetIsReady())
-        {
-            FireShot(target);
-            equippedWeapon.SetIsReady(false);
-            //equippedWeapon.SetReloadTimer(0.0f);
-            weaponTimer.Reset();
-        }*/
         if (weaponTimer.GetIsReady())
         {
             FireShot(target);
@@ -83,11 +76,6 @@ public class Weapon : MonoBehaviour
             flashIntensity -= Time.deltaTime * flashSpeed;
             flashIntensity = Mathf.Clamp(flashIntensity, 0.0f, 1.0f);
         }
-
-        /*for (int i = 0; i < muzzleFlashLights.Length; i++)
-        {
-            muzzleFlashLights[i].intensity = flashIntensity;
-        }*/
 
         for (int i = 0; i < muzzleFlashSprites.Length; i++)
         {

@@ -152,7 +152,6 @@ public class AstarPath : VersionedMonoBehaviour {
 	///
 	/// Note: Only relevant in the editor
 	///
-	/// TODO: Add a showOnlyLastPath flag to indicate whether to draw every node or only the ones visited by the latest path.
 	/// </summary>
 	public bool showSearchTree = false;
 

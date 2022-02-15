@@ -29,7 +29,6 @@ namespace Pathfinding {
 	/// - <b>Curved Non Uniform</b> [Open online documentation to see images]
 	///
 	/// Note: Modifies vectorPath array
-	/// TODO: Make the smooth modifier take the world geometry into account when smoothing
 	/// </summary>
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_simple_smooth_modifier.php")]
 	public class SimpleSmoothModifier : MonoModifier {

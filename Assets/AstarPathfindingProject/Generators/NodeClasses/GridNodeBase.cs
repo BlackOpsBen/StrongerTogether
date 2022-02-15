@@ -328,7 +328,6 @@ namespace Pathfinding {
 		}
 
 		public override void SerializeReferences (GraphSerializationContext ctx) {
-			// TODO: Deduplicate code
 			if (connections == null) {
 				ctx.writer.Write(-1);
 			} else {

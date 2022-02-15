@@ -148,7 +148,6 @@ namespace Pathfinding {
 		/// to ensure that these scripts get this call when scanning in Awake is to
 		/// set the Script Execution Order for AstarPath to some time later than default time
 		/// (see Edit -> Project Settings -> Script Execution Order).
-		/// TODO: Is this still relevant? A call to FindAllModifiers should have before this method is called
 		/// so the above warning is probably not relevant anymore.
 		///
 		/// See: OnLatePostScan
@@ -162,7 +161,6 @@ namespace Pathfinding {
 		/// to ensure that these scripts get this call when scanning in Awake is to
 		/// set the Script Execution Order for AstarPath to some time later than default time
 		/// (see Edit -> Project Settings -> Script Execution Order).
-		/// TODO: Is this still relevant? A call to FindAllModifiers should have before this method is called
 		/// so the above warning is probably not relevant anymore.
 		///
 		/// See: OnLatePostScan

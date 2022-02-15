@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d1f9e1b8a3145b9921e02adeef0b7d, type: 3}
+  m_Name: Rifle
+  m_EditorClassIdentifier: 
+  clipOptions:
+  - {fileID: 8300000, guid: 94c30de6c30eaec4c9e0f1263e9036a3, type: 3}
+  audioMixerGroup: {fileID: -3062461279898667115, guid: 916c3e30c22b94092a0d79eda321938f,
+    type: 2}
+  enableModulation: 1
+  pitchMin: 0.9
+  pitchMax: 1.1
+  volumeMin: 0.95
+  volumeMax: 1.05

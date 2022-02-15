@@ -407,7 +407,6 @@ namespace Pathfinding {
 				var currentRotationSpeed = rotationSpeed * Mathf.Max(0, (slowdown - 0.3f) / 0.7f);
 				nextRotation = SimulateRotationTowards(desiredRotationDirection, currentRotationSpeed * lastDeltaTime);
 			} else {
-				// TODO: simulatedRotation
 				nextRotation = rotation;
 			}
 		}

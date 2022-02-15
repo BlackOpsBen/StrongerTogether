@@ -265,7 +265,6 @@ namespace Pathfinding.Legacy {
 		/// <summary>
 		/// Calculates target point from the current line segment.
 		/// See: <see cref="forwardLook"/>
-		/// TODO: This function uses .magnitude quite a lot, can it be optimized?
 		/// </summary>
 		/// <param name="p">Current position</param>
 		/// <param name="a">Line segment start</param>

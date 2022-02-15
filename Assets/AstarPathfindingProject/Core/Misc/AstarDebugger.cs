@@ -32,7 +32,6 @@ namespace Pathfinding {
 	///
 	/// See: pooling
 	///
-	/// TODO: Add field showing how many graph updates are being done right now
 	/// </summary>
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_astar_debugger.php")]
 	public class AstarDebugger : VersionedMonoBehaviour {
