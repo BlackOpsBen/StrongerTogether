@@ -12,7 +12,8 @@ public class Intro : MonoBehaviour
     private void Start()
     {
         black.color = Color.black;
-        AudioManager.Instance.PlaySFX("Objectives");
+
+        // TODO play objectives dialog, high priority
     }
 
     private void Update()

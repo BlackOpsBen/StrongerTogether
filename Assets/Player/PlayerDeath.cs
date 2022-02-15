@@ -24,7 +24,9 @@ public class PlayerDeath : MonoBehaviour, IDie
         {
             SelectNextPlayer();
         }
-        AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_DEAD, false);
+
+        // TODO play character death sound
+        
         GameManager.Instance.GetComponent<TrackLivingPlayers>().ReduceLivingPlayers();
         GameManager.Instance.UpdatePlayerHPDisplay(int.Parse(gameObject.name), GetComponent<Health>().GetCurrentHealth());
         deathPFXPool.SpawnNextInPlayerPool(transform.position + Vector3.up);

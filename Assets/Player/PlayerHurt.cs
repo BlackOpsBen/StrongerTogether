@@ -13,7 +13,8 @@ public class PlayerHurt : MonoBehaviour, IHurt
 
     public void TriggerHurtBehavior()
     {
-        AudioManager.Instance.PlayDialog(int.Parse(gameObject.name), AudioManager.DIALOG_HURT, false);
+        // TODO play player hurt sound
+
         hitPFXPool.SpawnNextInPlayerPool(transform.position + Vector3.up);
         GameManager.Instance.UpdatePlayerHPDisplay(int.Parse(gameObject.name), GetComponent<Health>().GetCurrentHealth());
         GameManager.Instance.ShakeCamera(1f);

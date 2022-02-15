@@ -14,7 +14,7 @@ public class EnemyHurt : MonoBehaviour, IHurt
 
     public void TriggerHurtBehavior()
     {
-        AudioManager.Instance.PlayDialog(4, AudioManager.DIALOG_SELECTED, false); // TODO make not play 100%
+        //AudioManager.Instance.PlayDialog(4, AudioManager.DIALOG_SELECTED, false);
         hitPFXPool.SpawnNextInEnemyPool(transform.position + Vector3.up);
         RandomlyDropBloodSplat();
     }

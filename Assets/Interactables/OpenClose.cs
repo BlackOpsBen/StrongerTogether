@@ -46,7 +46,7 @@ public class OpenClose : MonoBehaviour, IInteract
             {
                 timer.MakeProgress(speedMultiplier);
 
-                AudioManager.Instance.PlaySFXLoop(interactionSoundName);
+                // TODO start interact sound loop
 
                 return;
             }
@@ -63,8 +63,9 @@ public class OpenClose : MonoBehaviour, IInteract
 
     private void CompleteInteraction()
     {
-        AudioManager.Instance.StopSFXLoop(interactionSoundName);
-        AudioManager.Instance.PlaySFX(openCloseSoundName);
+        // TODO stop interact sound loop
+
+        // TODO play open/close sound
 
         thisCollider.enabled = !thisCollider.enabled;
         thatCollider.enabled = !thisCollider.enabled;
@@ -88,6 +89,6 @@ public class OpenClose : MonoBehaviour, IInteract
 
     public void EndInteract()
     {
-        AudioManager.Instance.StopSFXLoop(interactionSoundName);
+        // TODO stop interact sound loop
     }
 }

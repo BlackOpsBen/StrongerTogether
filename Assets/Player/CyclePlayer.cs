@@ -123,7 +123,7 @@ public class CyclePlayer : MonoBehaviour
 
     private void PlaySelectedDialog()
     {
-        AudioManager.Instance.PlayDialog(currentPlayer, AudioManager.DIALOG_SELECTED, false);
+        // TODO play selected dialog for current player
     }
 
     public Movement[] GetPlayerCharacters()

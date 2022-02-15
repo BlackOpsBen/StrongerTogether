@@ -15,18 +15,23 @@ public class MovementSound : MonoBehaviour
     {
         if (GameManager.Instance.GetIsPaused())
         {
-            AudioManager.Instance.StopSFXLoop(runSound);
+            StopRunSound();
         }
         else
         {
             if (movement.GetIsMoving())
             {
-                AudioManager.Instance.PlaySFXLoop(runSound);
+                // TODO start run sound loop
             }
             else if (movement.GetIsActive())
             {
-                AudioManager.Instance.StopSFXLoop(runSound);
+                StopRunSound();
             }
         }
+    }
+
+    private void StopRunSound()
+    {
+        // TODO stop run sound loop
     }
 }

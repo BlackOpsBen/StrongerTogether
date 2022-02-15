@@ -89,9 +89,9 @@ public class GameManager : MonoBehaviour
             playersEscapes[i].DoEscape();
         }
         cyclePlayer.enabled = false;
-        AudioManager.Instance.StopMusic();
-        AudioManager.Instance.StopSFXLoop("CharRun");
-        AudioManager.Instance.PlaySFX("Win");
+        //AudioManager.Instance.StopMusic();
+        //AudioManager.Instance.StopSFXLoop("CharRun");
+        //AudioManager.Instance.PlaySFX("Win");
         victoryScreen.SetActive(true);
         victoryScreen.GetComponent<DisplayEndStats>().DisplayStats(GetNumLivingPlayers(), GetKillCount(), GetElapsedTimeStamp());
         Invoke("LoadNextLevel", sceneLoadDelay);
@@ -100,9 +100,9 @@ public class GameManager : MonoBehaviour
 
     private void Lose()
     {
-        AudioManager.Instance.StopMusic();
-        AudioManager.Instance.StopSFXLoop("CharRun");
-        AudioManager.Instance.PlaySFX("Lose");
+        //AudioManager.Instance.StopMusic();
+        //AudioManager.Instance.StopSFXLoop("CharRun");
+        //AudioManager.Instance.PlaySFX("Lose");
         defeatScreen.SetActive(true);
         Invoke("RestartLevel", sceneLoadDelay);
         FindObjectOfType<TriggerSelfDestruct>().Stop();

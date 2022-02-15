@@ -14,7 +14,7 @@ public class Objective : ScriptableObject
     {
         if (optionalCompletionSFX != "")
         {
-            AudioManager.Instance.PlaySFX(optionalCompletionSFX);
+            // TODO play optionalCompletionSFX sound
         }
         isComplete = true;
     }

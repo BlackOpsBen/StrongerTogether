@@ -28,7 +28,7 @@ public class Objectives : MonoBehaviour
                 UpdateDisplay(i);
                 completedObjectives++;
 
-                AudioManager.Instance.PlaySFX("Objective");
+                // TODO play objective complete sound
 
                 CheckForVictory();
                 return;

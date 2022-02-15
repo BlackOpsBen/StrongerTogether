@@ -41,10 +41,7 @@ public class CompletesObjective : MonoBehaviour, IInteract
                 {
                     timer.MakeProgress(speedMultiplier);
 
-                    if (interactionSoundName != "")
-                    {
-                        AudioManager.Instance.PlaySFXLoop(interactionSoundName);
-                    }
+                    // TODO play interact sound loop
 
                     return;
                 }
@@ -63,10 +60,7 @@ public class CompletesObjective : MonoBehaviour, IInteract
 
     private void CompleteInteraction()
     {
-        if (interactionSoundName != "")
-        {
-            AudioManager.Instance.StopSFXLoop(interactionSoundName);
-        }
+        // TODO stop interact sound loop
 
         GameManager.Instance.GetObjectives().CompleteObjective(completesObjective);
         timer.ResetProgress();
@@ -106,14 +100,13 @@ public class CompletesObjective : MonoBehaviour, IInteract
     {
         rect.transform.position = Camera.main.WorldToScreenPoint(transform.position);
         fade.DisplayText();
-        AudioManager.Instance.PlayObjectiveReminder();
+
+
+        // TODO play objective reminder
     }
 
     public void EndInteract()
     {
-        if (interactionSoundName != "")
-        {
-            AudioManager.Instance.StopSFXLoop(interactionSoundName);
-        }
+        // TODO stop interact sound loop
     }
 }

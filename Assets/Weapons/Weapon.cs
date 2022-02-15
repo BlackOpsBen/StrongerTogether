@@ -49,10 +49,11 @@ public class Weapon : MonoBehaviour
     {
         DealDamage(target);
 
-        AudioManager.Instance.PlaySFX(equippedWeapon.name);
+        // TODO play equipped weapon's shoot sound
+
         int currentPlayerIndex = int.Parse(transform.parent.name);
 
-        AudioManager.Instance.PlayDialog(currentPlayerIndex, AudioManager.DIALOG_KILL, true);
+        // TODO play character shooting dialog, low priority
 
         ShowMuzzleFlash();
     }

@@ -59,8 +59,8 @@ public class TriggerSelfDestruct : MonoBehaviour, ITriggerEffect
 
     private void Destruct()
     {
-        AudioManager.Instance.StopSFXLoop("Alarm");
-        AudioManager.Instance.PlaySFX("Explosion");
+        //AudioManager.Instance.StopSFXLoop("Alarm");
+        //AudioManager.Instance.PlaySFX("Explosion");
         GameManager.Instance.EndGame(false);
         timerText.gameObject.SetActive(false);
     }
@@ -76,7 +76,7 @@ public class TriggerSelfDestruct : MonoBehaviour, ITriggerEffect
     public void Trigger()
     {
         isStarted = true;
-        AudioManager.Instance.PlaySFXLoop("Alarm");
+        //AudioManager.Instance.PlaySFXLoop("Alarm");
     }
 
     public void Stop()
