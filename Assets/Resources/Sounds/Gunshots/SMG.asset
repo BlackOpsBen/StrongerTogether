@@ -17,7 +17,7 @@ MonoBehaviour:
   audioMixerGroup: {fileID: -3062461279898667115, guid: 916c3e30c22b94092a0d79eda321938f,
     type: 2}
   enableModulation: 1
-  pitchMin: 0.9
+  pitchMin: 0.8
   pitchMax: 1.1
   volumeMin: 0.95
   volumeMax: 1.05
